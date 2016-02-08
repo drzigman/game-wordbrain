@@ -23,21 +23,15 @@ Readonly my $GAME => WordBrain::Game->new(
         { letter => 'g', row => 2, col => 0 },
         { letter => 'h', row => 2, col => 1 },
         { letter => 'i', row => 2, col => 2 },
-    ]
+    ],
+    words_to_find => [ ],
 );
-
-Readonly my $NONE_USED => [
-    [qw( 0 0 0 )],
-    [qw( 0 0 0 )],
-    [qw( 0 0 0 )],
-];
-
 
 subtest 'Middle - Nothing Used' => sub {
     my $near_letters;
     lives_ok {
         $near_letters = find_near_letters({
-            used       => $NONE_USED,
+            used       => [ ],
             game       => $GAME,
             row_number => 1,
             col_number => 1,
@@ -52,16 +46,10 @@ subtest 'Middle - Nothing Used' => sub {
 };
 
 subtest 'Middle - Some Used' => sub {
-    my $used = [
-        [qw( 1 1 0 )],
-        [qw( 0 0 1 )],
-        [qw( 0 1 0 )],
-    ];
-
     my $near_letters;
     lives_ok {
         $near_letters = find_near_letters({
-            used       => $used,
+            used       => [ map { $GAME->letters->[$_] } qw( 0 1 5 7 ) ],
             game       => $GAME,
             row_number => 1,
             col_number => 1,
@@ -76,16 +64,10 @@ subtest 'Middle - Some Used' => sub {
 };
 
 subtest 'Middle - All Used' => sub {
-    my $used = [
-        [qw( 1 1 1 )],
-        [qw( 1 0 1 )],
-        [qw( 1 1 1 )],
-    ];
-
     my $near_letters;
     lives_ok {
         $near_letters = find_near_letters({
-            used       => $used,
+            used       => [ map { $GAME->letters->[$_] } qw( 0 1 2 3 5 6 7 8 ) ],
             game       => $GAME,
             row_number => 1,
             col_number => 1,
@@ -99,7 +81,7 @@ subtest 'Top Left' => sub {
     my $near_letters;
     lives_ok {
         $near_letters = find_near_letters({
-            used       => $NONE_USED,
+            used       => [ ],
             game       => $GAME,
             row_number => 0,
             col_number => 0,
@@ -117,7 +99,7 @@ subtest 'Top Right' => sub {
     my $near_letters;
     lives_ok {
         $near_letters = find_near_letters({
-            used       => $NONE_USED,
+            used       => [ ],
             game       => $GAME,
             row_number => 0,
             col_number => 2,
@@ -135,7 +117,7 @@ subtest 'Bottom Left' => sub {
     my $near_letters;
     lives_ok {
         $near_letters = find_near_letters({
-            used       => $NONE_USED,
+            used       => [ ],
             game       => $GAME,
             row_number => 2,
             col_number => 0,
@@ -153,7 +135,7 @@ subtest 'Bottom Right' => sub {
     my $near_letters;
     lives_ok {
         $near_letters = find_near_letters({
-            used       => $NONE_USED,
+            used       => [ ],
             game       => $GAME,
             row_number => 2,
             col_number => 2,
@@ -165,6 +147,20 @@ subtest 'Bottom Right' => sub {
     for my $expected_letter (qw( e f h  )) {
         ok( ( grep { $_->letter eq $expected_letter } @{ $near_letters } ), "Correctly found $expected_letter" );
     }
+};
+
+subtest 'No Direct Path' => sub {
+    my $near_letters;
+    lives_ok {
+        $near_letters = find_near_letters({
+            used       => [ map { $GAME->letters->[$_] } qw( 1 3 4 ) ],
+            game       => $GAME,
+            row_number => 0,
+            col_number => 0,
+        });
+    } 'Lives through finding near letters';
+
+    cmp_ok( scalar @{ $near_letters }, '==', 0, 'Correct number of near letters' );
 };
 
 done_testing;

@@ -7,9 +7,12 @@ use Test::More;
 use Test::Exception;
 
 use WordBrain::Letter;
+use WordBrain::WordToFind;
 use WordBrain::Game;
 
 subtest 'Coerce From ArrayRef[HashRef]' => sub {
+    my $word_to_find = WordBrain::WordToFind->new( num_letters => 5 );
+
     my @letter_hashrefs;
     my @letter_chars = (qw( a b c d e f g h i ));
 
@@ -26,7 +29,8 @@ subtest 'Coerce From ArrayRef[HashRef]' => sub {
     my $game;
     lives_ok {
         $game = WordBrain::Game->new(
-            letters => \@letter_hashrefs,
+            letters       => \@letter_hashrefs,
+            words_to_find => [ $word_to_find ],
         );
     } 'Lives through creation of Game';
 
