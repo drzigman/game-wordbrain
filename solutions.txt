@@ -1537,3 +1537,77 @@ real    27m14.806s
 user    27m14.506s
 sys 0m0.294s
 
+
+
+Penguin - Level 8
+
+[drzigman@localhost wordbrain]$ time perl -I lib script/play.pl --playfield="d,y,a,e,r,p,s,i,a,c,k,t,c,r,e,n" --word-to-find=4 --word-to-find=7 --word-to-find=5
+======= Game =======
+ d  y  a  e 
+ r  p  s  i 
+ a  c  k  t 
+ c  r  e  n 
+
+===== Possible Solution =====
+Word: card  | c - 3 x 0 | a - 2 x 0 | r - 1 x 0 | d - 0 x 0 | 
+    Word: necktie   | n - 3 x 3 | e - 3 x 2 | c - 2 x 1 | k - 2 x 2 | t - 2 x 3 | i - 1 x 3 | e - 0 x 3 | 
+        Word: raspy     | r - 3 x 1 | a - 2 x 2 | s - 3 x 2 | p - 2 x 1 | y - 1 x 1 | 
+        Word: spray     | s - 3 x 2 | p - 2 x 1 | r - 3 x 1 | a - 2 x 2 | y - 1 x 1 | 
+Word: necktie   | n - 3 x 3 | e - 3 x 2 | c - 2 x 1 | k - 2 x 2 | t - 2 x 3 | i - 1 x 3 | e - 0 x 3 | 
+    Word: raspy     | r - 3 x 1 | a - 2 x 2 | s - 3 x 2 | p - 2 x 1 | y - 1 x 1 | 
+        Word: card  | c - 3 x 0 | a - 2 x 0 | r - 1 x 0 | d - 0 x 0 | 
+    Word: yard  | y - 1 x 1 | a - 2 x 0 | r - 1 x 0 | d - 0 x 0 | 
+        Word: craps     | c - 3 x 0 | r - 3 x 1 | a - 2 x 2 | p - 2 x 1 | s - 3 x 2 | 
+    Word: dray  | d - 0 x 0 | r - 1 x 0 | a - 2 x 0 | y - 1 x 1 | 
+        Word: craps     | c - 3 x 0 | r - 3 x 1 | a - 2 x 2 | p - 2 x 1 | s - 3 x 2 | 
+    Word: craps     | c - 3 x 0 | r - 3 x 1 | a - 2 x 2 | p - 2 x 1 | s - 3 x 2 | 
+        Word: yard  | y - 3 x 1 | a - 3 x 0 | r - 2 x 0 | d - 1 x 0 | 
+        Word: dray  | d - 1 x 0 | r - 2 x 0 | a - 3 x 0 | y - 3 x 1 | 
+    Word: crap  | c - 3 x 0 | r - 3 x 1 | a - 2 x 2 | p - 2 x 1 | 
+        Word: drays     | d - 1 x 0 | r - 2 x 0 | a - 3 x 0 | y - 3 x 1 | s - 3 x 2 | 
+    Word: card  | c - 3 x 0 | a - 2 x 0 | r - 1 x 0 | d - 0 x 0 | 
+        Word: raspy     | r - 3 x 1 | a - 2 x 2 | s - 3 x 2 | p - 2 x 1 | y - 1 x 1 | 
+        Word: spray     | s - 3 x 2 | p - 2 x 1 | r - 3 x 1 | a - 2 x 2 | y - 1 x 1 | 
+    Word: carp  | c - 3 x 0 | a - 2 x 0 | r - 1 x 0 | p - 2 x 1 | 
+        Word: drays     | d - 3 x 0 | r - 3 x 1 | a - 2 x 2 | y - 2 x 1 | s - 3 x 2 | 
+    Word: spray     | s - 3 x 2 | p - 2 x 1 | r - 3 x 1 | a - 2 x 2 | y - 1 x 1 | 
+        Word: card  | c - 3 x 0 | a - 2 x 0 | r - 1 x 0 | d - 0 x 0 | 
+    Word: carps     | c - 3 x 0 | a - 2 x 0 | r - 1 x 0 | p - 2 x 1 | s - 3 x 2 | 
+        Word: yard  | y - 2 x 1 | a - 3 x 2 | r - 3 x 1 | d - 3 x 0 | 
+        Word: dray  | d - 3 x 0 | r - 3 x 1 | a - 3 x 2 | y - 2 x 1 | 
+Word: carp  | c - 3 x 0 | a - 2 x 0 | r - 1 x 0 | p - 1 x 1 | 
+    Word: necktie   | n - 3 x 3 | e - 3 x 2 | c - 2 x 1 | k - 2 x 2 | t - 2 x 3 | i - 1 x 3 | e - 0 x 3 | 
+        Word: drays     | d - 3 x 0 | r - 3 x 1 | a - 2 x 2 | y - 2 x 1 | s - 3 x 2 | 
+Word: carps     | c - 3 x 0 | a - 2 x 0 | r - 1 x 0 | p - 1 x 1 | s - 1 x 2 | 
+    Word: necktie   | n - 3 x 3 | e - 3 x 2 | c - 2 x 1 | k - 2 x 2 | t - 2 x 3 | i - 1 x 3 | e - 0 x 3 | 
+        Word: yard  | y - 2 x 1 | a - 3 x 2 | r - 3 x 1 | d - 3 x 0 | 
+        Word: dray  | d - 3 x 0 | r - 3 x 1 | a - 3 x 2 | y - 2 x 1 | 
+
+real    4m10.866s
+user    4m10.353s
+sys 0m0.080s
+
+
+
+
+Penguin - Level 9
+
+[drzigman@localhost wordbrain]$ time perl -I lib script/play.pl --playfield="d,o,o,r,r,a,p,o,a,o,b,u,l,v,c,f" --word-to-find=4 --word-to-find=4 --word-to-find=8
+======= Game =======
+ d  o  o  r 
+ r  a  p  o 
+ a  o  b  u 
+ l  v  c  f 
+
+===== Possible Solution =====
+Word: cupboard  | c - 3 x 2 | u - 2 x 3 | p - 1 x 2 | b - 2 x 2 | o - 2 x 1 | a - 1 x 1 | r - 1 x 0 | d - 0 x 0 | 
+    Word: roof  | r - 1 x 3 | o - 2 x 3 | o - 3 x 2 | f - 3 x 3 | 
+        Word: oval  | o - 2 x 1 | v - 3 x 1 | a - 2 x 0 | l - 3 x 0 |  ***
+    Word: oval  | o - 2 x 1 | v - 3 x 1 | a - 2 x 0 | l - 3 x 0 | 
+        Word: roof  | r - 1 x 3 | o - 2 x 3 | o - 3 x 2 | f - 3 x 3 | 
+Word: oval  | o - 2 x 1 | v - 3 x 1 | a - 2 x 0 | l - 3 x 0 | 
+    Word: cupboard  | c - 3 x 2 | u - 2 x 3 | p - 1 x 2 | b - 2 x 2 | o - 2 x 1 | a - 3 x 1 | r - 3 x 0 | d - 2 x 0 | 
+        Word: roof  | r - 1 x 3 | o - 2 x 3 | o - 3 x 2 | f - 3 x 3 | 
+
+
+
