@@ -1,0 +1,1539 @@
+Spider - Level 6
+
+[drzigman@lion wordbrain]$ time perl -I lib script/play.pl --playfield="g,t,o,a" --word-to-find=4
+======= Game =======
+ g  t 
+ o  a 
+
+===== Possible Solution =====
+Word: goat  | g - 0 x 0 | o - 1 x 0 | a - 1 x 1 | t - 0 x 1 |   ***
+Word: toga  | t - 0 x 1 | o - 1 x 0 | g - 0 x 0 | a - 1 x 1 | 
+
+real    0m0.357s
+user    0m0.308s
+sys 0m0.026s
+
+
+
+
+
+
+
+Crab - Level 5
+
+[drzigman@lion wordbrain]$ time perl -I lib script/play.pl --playfield="w,a,e,s,n,l,u,f,f" --word-to-find=3 --word-to-find=6
+======= Game =======
+ w  a  e 
+ s  n  l 
+ u  f  f 
+
+===== Possible Solution =====
+Word: nus   | n - 1 x 1 | u - 2 x 0 | s - 1 x 0 | 
+    Word: waffle    | w - 2 x 0 | a - 1 x 1 | f - 2 x 1 | f - 2 x 2 | l - 1 x 2 | e - 0 x 2 | 
+Word: sun   | s - 1 x 0 | u - 2 x 0 | n - 1 x 1 | 
+    Word: waffle    | w - 2 x 0 | a - 1 x 1 | f - 2 x 1 | f - 2 x 2 | l - 1 x 2 | e - 0 x 2 | ***
+
+real    0m1.648s
+user    0m1.625s
+sys 0m0.019s
+
+
+
+
+
+
+
+
+Penguin - Level 1
+
+time perl -I lib/ script/play.pl \
+    --playfield="l,a,t,o,o,l,t,r,g,e,e,a,b,u,g,n" \
+    --word-to-find=4 \
+    --word-to-find=6 \
+    --word-to-find=6 \
+
+======= Game =======
+ l  a  t  o 
+ o  l  t  r 
+ g  e  e  a 
+ b  u  g  n 
+
+===== Possible Solution =====
+Word: rotten    | r - 1 x 3 | o - 0 x 3 | t - 0 x 2 | t - 1 x 2 | e - 2 x 2 | n - 3 x 3 | 
+    Word: goal  | g - 2 x 0 | o - 1 x 0 | a - 0 x 1 | l - 1 x 1 | 
+        Word: beluga    | b - 3 x 0 | e - 2 x 1 | l - 2 x 0 | u - 3 x 1 | g - 3 x 2 | a - 3 x 3 | 
+Word: goat  | g - 2 x 0 | o - 1 x 0 | a - 0 x 1 | t - 0 x 2 | 
+    Word: bullet    | b - 3 x 0 | u - 3 x 1 | l - 2 x 0 | l - 1 x 1 | e - 2 x 1 | t - 1 x 2 | 
+        Word: orange    | o - 0 x 3 | r - 1 x 3 | a - 2 x 3 | n - 3 x 3 | g - 3 x 2 | e - 2 x 2 |  ***
+    Word: orange    | o - 0 x 3 | r - 1 x 3 | a - 2 x 3 | n - 3 x 3 | g - 3 x 2 | e - 2 x 1 | 
+        Word: bullet    | b - 3 x 0 | u - 3 x 1 | l - 2 x 0 | l - 2 x 1 | e - 3 x 2 | t - 2 x 2 | 
+Word: goal  | g - 2 x 0 | o - 1 x 0 | a - 0 x 1 | l - 1 x 1 | 
+    Word: rotten    | r - 1 x 3 | o - 0 x 3 | t - 0 x 2 | t - 1 x 2 | e - 2 x 2 | n - 3 x 3 | 
+        Word: beluga    | b - 3 x 0 | e - 2 x 1 | l - 2 x 0 | u - 3 x 1 | g - 3 x 2 | a - 3 x 3 | 
+    Word: beluga    | b - 3 x 0 | e - 2 x 1 | l - 2 x 0 | u - 3 x 1 | g - 3 x 2 | a - 2 x 3 | 
+        Word: rotten    | r - 2 x 3 | o - 1 x 3 | t - 1 x 2 | t - 2 x 2 | e - 3 x 2 | n - 3 x 3 | 
+Word: orange    | o - 0 x 3 | r - 1 x 3 | a - 2 x 3 | n - 3 x 3 | g - 3 x 2 | e - 2 x 1 | 
+    Word: goat  | g - 2 x 0 | o - 1 x 0 | a - 1 x 1 | t - 1 x 2 | 
+        Word: bullet    | b - 3 x 0 | u - 3 x 1 | l - 2 x 0 | l - 2 x 1 | e - 3 x 2 | t - 2 x 2 | 
+
+real    1m24.766s
+user    1m24.765s
+sys 0m0.026s
+
+
+
+
+
+
+Penguin - Level 2
+
+#!/bin/bash
+
+time perl -I lib/ script/play.pl \
+    --playfield="t,d,a,c,g,r,m,a,a,n,e,n,b,u,b,i" \
+    --word-to-find=3 \
+    --word-to-find=3 \
+    --word-to-find=5 \
+    --word-to-find=5 \
+
+======= Game =======
+ t  d  a  c 
+ g  r  m  a 
+ a  n  e  n 
+ b  u  b  i 
+
+===== Possible Solution =====
+Word: ban   | b - 3 x 0 | a - 2 x 0 | n - 2 x 1 | 
+    Word: cam   | c - 0 x 3 | a - 1 x 3 | m - 1 x 2 | 
+        Word: tubed     | t - 2 x 0 | u - 3 x 1 | b - 3 x 2 | e - 2 x 2 | d - 1 x 1 | 
+            Word: grain     | g - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: debug     | d - 1 x 1 | e - 2 x 2 | b - 3 x 2 | u - 3 x 1 | g - 3 x 0 | 
+            Word: train     | t - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: debut     | d - 1 x 1 | e - 2 x 2 | b - 3 x 2 | u - 3 x 1 | t - 2 x 0 | 
+            Word: grain     | g - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: tubed     | t - 2 x 0 | u - 3 x 1 | b - 3 x 2 | e - 2 x 2 | d - 1 x 1 | 
+        Word: grain     | g - 3 x 0 | r - 3 x 1 | a - 2 x 2 | i - 3 x 3 | n - 2 x 3 | 
+            Word: mac   | m - 3 x 2 | a - 3 x 3 | c - 2 x 3 | 
+            Word: cam   | c - 2 x 3 | a - 3 x 3 | m - 3 x 2 | 
+    Word: gut   | g - 3 x 0 | u - 3 x 1 | t - 2 x 0 | 
+        Word: dream     | d - 2 x 1 | r - 3 x 1 | e - 2 x 2 | a - 1 x 3 | m - 1 x 2 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: debug     | d - 1 x 1 | e - 2 x 2 | b - 3 x 2 | u - 3 x 1 | g - 3 x 0 | 
+        Word: train     | t - 3 x 0 | r - 3 x 1 | a - 2 x 2 | i - 3 x 3 | n - 2 x 3 | 
+            Word: mac   | m - 3 x 2 | a - 3 x 3 | c - 2 x 3 | 
+            Word: cam   | c - 2 x 3 | a - 3 x 3 | m - 3 x 2 | 
+    Word: mac   | m - 1 x 2 | a - 1 x 3 | c - 0 x 3 | 
+        Word: debug     | d - 1 x 1 | e - 2 x 2 | b - 3 x 2 | u - 3 x 1 | g - 3 x 0 | 
+            Word: train     | t - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: tubed     | t - 2 x 0 | u - 3 x 1 | b - 3 x 2 | e - 2 x 2 | d - 1 x 1 | 
+            Word: grain     | g - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: debut     | d - 1 x 1 | e - 2 x 2 | b - 3 x 2 | u - 3 x 1 | t - 2 x 0 | 
+            Word: grain     | g - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: tug   | t - 2 x 0 | u - 3 x 1 | g - 3 x 0 | 
+        Word: dream     | d - 2 x 1 | r - 3 x 1 | e - 2 x 2 | a - 1 x 3 | m - 1 x 2 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: debut     | d - 1 x 1 | e - 2 x 2 | b - 3 x 2 | u - 3 x 1 | t - 2 x 0 | 
+        Word: grain     | g - 3 x 0 | r - 3 x 1 | a - 2 x 2 | i - 3 x 3 | n - 2 x 3 | 
+            Word: mac   | m - 3 x 2 | a - 3 x 3 | c - 2 x 3 | 
+            Word: cam   | c - 2 x 3 | a - 3 x 3 | m - 3 x 2 | 
+    Word: dream     | d - 1 x 1 | r - 2 x 1 | e - 2 x 2 | a - 1 x 3 | m - 1 x 2 | 
+        Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+            Word: tug   | t - 2 x 0 | u - 3 x 1 | g - 3 x 0 | 
+            Word: gut   | g - 3 x 0 | u - 3 x 1 | t - 2 x 0 | 
+        Word: gut   | g - 3 x 0 | u - 3 x 1 | t - 2 x 0 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: tug   | t - 2 x 0 | u - 3 x 1 | g - 3 x 0 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+Word: nab   | n - 2 x 1 | a - 2 x 0 | b - 3 x 0 | 
+    Word: tug   | t - 2 x 0 | u - 3 x 1 | g - 3 x 0 | 
+        Word: dream     | d - 2 x 1 | r - 3 x 1 | e - 2 x 2 | a - 1 x 3 | m - 1 x 2 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: dream     | d - 1 x 1 | r - 2 x 1 | e - 2 x 2 | a - 1 x 3 | m - 1 x 2 | 
+        Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+            Word: tug   | t - 2 x 0 | u - 3 x 1 | g - 3 x 0 | 
+            Word: gut   | g - 3 x 0 | u - 3 x 1 | t - 2 x 0 | 
+        Word: gut   | g - 3 x 0 | u - 3 x 1 | t - 2 x 0 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: tug   | t - 2 x 0 | u - 3 x 1 | g - 3 x 0 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: debut     | d - 1 x 1 | e - 2 x 2 | b - 3 x 2 | u - 3 x 1 | t - 2 x 0 | 
+        Word: grain     | g - 3 x 0 | r - 3 x 1 | a - 2 x 2 | i - 3 x 3 | n - 2 x 3 | 
+            Word: cam   | c - 2 x 3 | a - 3 x 3 | m - 3 x 2 | 
+            Word: mac   | m - 3 x 2 | a - 3 x 3 | c - 2 x 3 | 
+    Word: mac   | m - 1 x 2 | a - 1 x 3 | c - 0 x 3 | 
+        Word: debug     | d - 1 x 1 | e - 2 x 2 | b - 3 x 2 | u - 3 x 1 | g - 3 x 0 | 
+            Word: train     | t - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: tubed     | t - 2 x 0 | u - 3 x 1 | b - 3 x 2 | e - 2 x 2 | d - 1 x 1 | 
+            Word: grain     | g - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: debut     | d - 1 x 1 | e - 2 x 2 | b - 3 x 2 | u - 3 x 1 | t - 2 x 0 | 
+            Word: grain     | g - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: cam   | c - 0 x 3 | a - 1 x 3 | m - 1 x 2 | 
+        Word: debug     | d - 1 x 1 | e - 2 x 2 | b - 3 x 2 | u - 3 x 1 | g - 3 x 0 | 
+            Word: train     | t - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: tubed     | t - 2 x 0 | u - 3 x 1 | b - 3 x 2 | e - 2 x 2 | d - 1 x 1 | 
+            Word: grain     | g - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: debut     | d - 1 x 1 | e - 2 x 2 | b - 3 x 2 | u - 3 x 1 | t - 2 x 0 | 
+            Word: grain     | g - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: gut   | g - 3 x 0 | u - 3 x 1 | t - 2 x 0 | 
+        Word: dream     | d - 2 x 1 | r - 3 x 1 | e - 2 x 2 | a - 1 x 3 | m - 1 x 2 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: tubed     | t - 2 x 0 | u - 3 x 1 | b - 3 x 2 | e - 2 x 2 | d - 1 x 1 | 
+        Word: grain     | g - 3 x 0 | r - 3 x 1 | a - 2 x 2 | i - 3 x 3 | n - 2 x 3 | 
+            Word: cam   | c - 2 x 3 | a - 3 x 3 | m - 3 x 2 | 
+            Word: mac   | m - 3 x 2 | a - 3 x 3 | c - 2 x 3 | 
+    Word: debug     | d - 1 x 1 | e - 2 x 2 | b - 3 x 2 | u - 3 x 1 | g - 3 x 0 | 
+        Word: train     | t - 3 x 0 | r - 3 x 1 | a - 2 x 2 | i - 3 x 3 | n - 2 x 3 | 
+            Word: mac   | m - 3 x 2 | a - 3 x 3 | c - 2 x 3 | 
+            Word: cam   | c - 2 x 3 | a - 3 x 3 | m - 3 x 2 | 
+Word: cam   | c - 0 x 3 | a - 1 x 3 | m - 1 x 2 | 
+    Word: nag   | n - 2 x 1 | a - 2 x 0 | g - 1 x 0 | 
+        Word: debut     | d - 1 x 1 | e - 2 x 2 | b - 3 x 2 | u - 3 x 1 | t - 2 x 0 | 
+            Word: brain     | b - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: tubed     | t - 2 x 0 | u - 3 x 1 | b - 3 x 2 | e - 2 x 2 | d - 1 x 1 | 
+            Word: brain     | b - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: nab   | n - 2 x 1 | a - 2 x 0 | b - 3 x 0 | 
+        Word: debut     | d - 1 x 1 | e - 2 x 2 | b - 3 x 2 | u - 3 x 1 | t - 2 x 0 | 
+            Word: grain     | g - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: tubed     | t - 2 x 0 | u - 3 x 1 | b - 3 x 2 | e - 2 x 2 | d - 1 x 1 | 
+            Word: grain     | g - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: debug     | d - 1 x 1 | e - 2 x 2 | b - 3 x 2 | u - 3 x 1 | g - 3 x 0 | 
+            Word: train     | t - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: ban   | b - 3 x 0 | a - 2 x 0 | n - 2 x 1 | 
+        Word: debut     | d - 1 x 1 | e - 2 x 2 | b - 3 x 2 | u - 3 x 1 | t - 2 x 0 | 
+            Word: grain     | g - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: debug     | d - 1 x 1 | e - 2 x 2 | b - 3 x 2 | u - 3 x 1 | g - 3 x 0 | 
+            Word: train     | t - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: tubed     | t - 2 x 0 | u - 3 x 1 | b - 3 x 2 | e - 2 x 2 | d - 1 x 1 | 
+            Word: grain     | g - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+Word: gnu   | g - 1 x 0 | n - 2 x 1 | u - 3 x 1 | 
+    Word: dream     | d - 2 x 1 | r - 3 x 1 | e - 2 x 2 | a - 1 x 3 | m - 1 x 2 | 
+        Word: tab   | t - 1 x 0 | a - 2 x 0 | b - 3 x 0 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: bat   | b - 3 x 0 | a - 2 x 0 | t - 1 x 0 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+            Word: tab   | t - 1 x 0 | a - 2 x 0 | b - 3 x 0 | 
+            Word: bat   | b - 3 x 0 | a - 2 x 0 | t - 1 x 0 | 
+    Word: bat   | b - 3 x 0 | a - 2 x 0 | t - 1 x 0 | 
+        Word: dream     | d - 2 x 1 | r - 3 x 1 | e - 2 x 2 | a - 1 x 3 | m - 1 x 2 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: tad   | t - 1 x 0 | a - 2 x 0 | d - 2 x 1 | 
+        Word: bream     | b - 3 x 0 | r - 3 x 1 | e - 2 x 2 | a - 1 x 3 | m - 1 x 2 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: tab   | t - 1 x 0 | a - 2 x 0 | b - 3 x 0 | 
+        Word: dream     | d - 2 x 1 | r - 3 x 1 | e - 2 x 2 | a - 1 x 3 | m - 1 x 2 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: bream     | b - 3 x 0 | r - 3 x 1 | e - 2 x 2 | a - 1 x 3 | m - 1 x 2 | 
+        Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+            Word: tad   | t - 2 x 0 | a - 3 x 0 | d - 3 x 1 | 
+        Word: tad   | t - 2 x 0 | a - 3 x 0 | d - 3 x 1 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+Word: rag   | r - 1 x 1 | a - 2 x 0 | g - 1 x 0 | 
+    Word: amend     | a - 1 x 3 | m - 1 x 2 | e - 2 x 2 | n - 2 x 1 | d - 1 x 1 | 
+        Word: tub   | t - 2 x 0 | u - 3 x 1 | b - 3 x 0 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: but   | b - 3 x 0 | u - 3 x 1 | t - 2 x 0 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+            Word: but   | b - 3 x 0 | u - 3 x 1 | t - 2 x 0 | 
+            Word: tub   | t - 2 x 0 | u - 3 x 1 | b - 3 x 0 | 
+    Word: tub   | t - 2 x 0 | u - 3 x 1 | b - 3 x 0 | 
+        Word: amend     | a - 1 x 3 | m - 1 x 2 | e - 2 x 2 | n - 3 x 1 | d - 2 x 1 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: but   | b - 3 x 0 | u - 3 x 1 | t - 2 x 0 | 
+        Word: amend     | a - 1 x 3 | m - 1 x 2 | e - 2 x 2 | n - 3 x 1 | d - 2 x 1 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+Word: inert     | i - 3 x 3 | n - 2 x 3 | e - 2 x 2 | r - 1 x 1 | t - 0 x 0 | 
+    Word: adman     | a - 2 x 0 | d - 1 x 1 | m - 2 x 2 | a - 1 x 2 | n - 2 x 1 | 
+        Word: bug   | b - 3 x 0 | u - 3 x 1 | g - 2 x 0 | 
+            Word: cab   | c - 2 x 3 | a - 3 x 3 | b - 3 x 2 | 
+        Word: cab   | c - 2 x 3 | a - 3 x 3 | b - 3 x 2 | 
+            Word: bug   | b - 3 x 0 | u - 3 x 1 | g - 2 x 0 | 
+Word: mac   | m - 1 x 2 | a - 1 x 3 | c - 0 x 3 | 
+    Word: ban   | b - 3 x 0 | a - 2 x 0 | n - 2 x 1 | 
+        Word: tubed     | t - 2 x 0 | u - 3 x 1 | b - 3 x 2 | e - 2 x 2 | d - 1 x 1 | 
+            Word: grain     | g - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: debug     | d - 1 x 1 | e - 2 x 2 | b - 3 x 2 | u - 3 x 1 | g - 3 x 0 | 
+            Word: train     | t - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: debut     | d - 1 x 1 | e - 2 x 2 | b - 3 x 2 | u - 3 x 1 | t - 2 x 0 | 
+            Word: grain     | g - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: nab   | n - 2 x 1 | a - 2 x 0 | b - 3 x 0 | 
+        Word: tubed     | t - 2 x 0 | u - 3 x 1 | b - 3 x 2 | e - 2 x 2 | d - 1 x 1 | 
+            Word: grain     | g - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: debug     | d - 1 x 1 | e - 2 x 2 | b - 3 x 2 | u - 3 x 1 | g - 3 x 0 | 
+            Word: train     | t - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: debut     | d - 1 x 1 | e - 2 x 2 | b - 3 x 2 | u - 3 x 1 | t - 2 x 0 | 
+            Word: grain     | g - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: nag   | n - 2 x 1 | a - 2 x 0 | g - 1 x 0 | 
+        Word: debut     | d - 1 x 1 | e - 2 x 2 | b - 3 x 2 | u - 3 x 1 | t - 2 x 0 | 
+            Word: brain     | b - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: tubed     | t - 2 x 0 | u - 3 x 1 | b - 3 x 2 | e - 2 x 2 | d - 1 x 1 | 
+            Word: brain     | b - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+Word: bag   | b - 3 x 0 | a - 2 x 0 | g - 1 x 0 | 
+    Word: nut   | n - 2 x 1 | u - 3 x 1 | t - 3 x 0 | 
+        Word: dream     | d - 2 x 1 | r - 3 x 1 | e - 2 x 2 | a - 1 x 3 | m - 1 x 2 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: dream     | d - 0 x 1 | r - 1 x 1 | e - 2 x 2 | a - 1 x 3 | m - 1 x 2 | 
+        Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+            Word: tun   | t - 3 x 0 | u - 3 x 1 | n - 2 x 1 | 
+            Word: nut   | n - 2 x 1 | u - 3 x 1 | t - 3 x 0 | 
+        Word: tun   | t - 3 x 0 | u - 3 x 1 | n - 2 x 1 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: nut   | n - 2 x 1 | u - 3 x 1 | t - 3 x 0 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: tun   | t - 3 x 0 | u - 3 x 1 | n - 2 x 1 | 
+        Word: dream     | d - 2 x 1 | r - 3 x 1 | e - 2 x 2 | a - 1 x 3 | m - 1 x 2 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+Word: art   | a - 2 x 0 | r - 1 x 1 | t - 0 x 0 | 
+    Word: amend     | a - 1 x 3 | m - 1 x 2 | e - 2 x 2 | n - 2 x 1 | d - 1 x 1 | 
+        Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+            Word: bug   | b - 3 x 0 | u - 3 x 1 | g - 2 x 0 | 
+        Word: bug   | b - 3 x 0 | u - 3 x 1 | g - 2 x 0 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: bug   | b - 3 x 0 | u - 3 x 1 | g - 2 x 0 | 
+        Word: amend     | a - 1 x 3 | m - 1 x 2 | e - 2 x 2 | n - 3 x 1 | d - 2 x 1 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+Word: bar   | b - 3 x 0 | a - 2 x 0 | r - 1 x 1 | 
+    Word: tug   | t - 2 x 0 | u - 3 x 1 | g - 3 x 0 | 
+        Word: amend     | a - 1 x 3 | m - 1 x 2 | e - 2 x 2 | n - 3 x 1 | d - 2 x 1 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: gut   | g - 3 x 0 | u - 3 x 1 | t - 2 x 0 | 
+        Word: amend     | a - 1 x 3 | m - 1 x 2 | e - 2 x 2 | n - 3 x 1 | d - 2 x 1 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: amend     | a - 1 x 3 | m - 1 x 2 | e - 2 x 2 | n - 2 x 1 | d - 1 x 1 | 
+        Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+            Word: tug   | t - 2 x 0 | u - 3 x 1 | g - 3 x 0 | 
+            Word: gut   | g - 3 x 0 | u - 3 x 1 | t - 2 x 0 | 
+        Word: gut   | g - 3 x 0 | u - 3 x 1 | t - 2 x 0 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: tug   | t - 2 x 0 | u - 3 x 1 | g - 3 x 0 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+Word: gab   | g - 1 x 0 | a - 2 x 0 | b - 3 x 0 | 
+    Word: nut   | n - 2 x 1 | u - 3 x 1 | t - 3 x 0 | 
+        Word: dream     | d - 2 x 1 | r - 3 x 1 | e - 2 x 2 | a - 1 x 3 | m - 1 x 2 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: dream     | d - 0 x 1 | r - 1 x 1 | e - 2 x 2 | a - 1 x 3 | m - 1 x 2 | 
+        Word: nut   | n - 2 x 1 | u - 3 x 1 | t - 3 x 0 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: tun   | t - 3 x 0 | u - 3 x 1 | n - 2 x 1 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+            Word: nut   | n - 2 x 1 | u - 3 x 1 | t - 3 x 0 | 
+            Word: tun   | t - 3 x 0 | u - 3 x 1 | n - 2 x 1 | 
+    Word: tun   | t - 3 x 0 | u - 3 x 1 | n - 2 x 1 | 
+        Word: dream     | d - 2 x 1 | r - 3 x 1 | e - 2 x 2 | a - 1 x 3 | m - 1 x 2 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+Word: dream     | d - 0 x 1 | r - 1 x 1 | e - 2 x 2 | a - 1 x 3 | m - 1 x 2 | 
+    Word: nag   | n - 2 x 1 | a - 2 x 0 | g - 1 x 0 | 
+        Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+            Word: tub   | t - 2 x 0 | u - 3 x 1 | b - 3 x 0 | 
+            Word: but   | b - 3 x 0 | u - 3 x 1 | t - 2 x 0 | 
+        Word: but   | b - 3 x 0 | u - 3 x 1 | t - 2 x 0 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: tub   | t - 2 x 0 | u - 3 x 1 | b - 3 x 0 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: gab   | g - 1 x 0 | a - 2 x 0 | b - 3 x 0 | 
+        Word: nut   | n - 2 x 1 | u - 3 x 1 | t - 3 x 0 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: tun   | t - 3 x 0 | u - 3 x 1 | n - 2 x 1 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+            Word: tun   | t - 3 x 0 | u - 3 x 1 | n - 2 x 1 | 
+            Word: nut   | n - 2 x 1 | u - 3 x 1 | t - 3 x 0 | 
+    Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: ban   | b - 3 x 0 | a - 2 x 0 | n - 2 x 1 | 
+            Word: gut   | g - 3 x 0 | u - 3 x 1 | t - 2 x 0 | 
+            Word: tug   | t - 2 x 0 | u - 3 x 1 | g - 3 x 0 | 
+        Word: nab   | n - 2 x 1 | a - 2 x 0 | b - 3 x 0 | 
+            Word: tug   | t - 2 x 0 | u - 3 x 1 | g - 3 x 0 | 
+            Word: gut   | g - 3 x 0 | u - 3 x 1 | t - 2 x 0 | 
+        Word: gab   | g - 1 x 0 | a - 2 x 0 | b - 3 x 0 | 
+            Word: nut   | n - 2 x 1 | u - 3 x 1 | t - 3 x 0 | 
+            Word: tun   | t - 3 x 0 | u - 3 x 1 | n - 2 x 1 | 
+        Word: gnu   | g - 1 x 0 | n - 2 x 1 | u - 3 x 1 | 
+            Word: tab   | t - 1 x 0 | a - 2 x 0 | b - 3 x 0 | 
+            Word: bat   | b - 3 x 0 | a - 2 x 0 | t - 1 x 0 | 
+        Word: nag   | n - 2 x 1 | a - 2 x 0 | g - 1 x 0 | 
+            Word: but   | b - 3 x 0 | u - 3 x 1 | t - 2 x 0 | 
+            Word: tub   | t - 2 x 0 | u - 3 x 1 | b - 3 x 0 | 
+        Word: bag   | b - 3 x 0 | a - 2 x 0 | g - 1 x 0 | 
+            Word: tun   | t - 3 x 0 | u - 3 x 1 | n - 2 x 1 | 
+            Word: nut   | n - 2 x 1 | u - 3 x 1 | t - 3 x 0 | 
+    Word: bag   | b - 3 x 0 | a - 2 x 0 | g - 1 x 0 | 
+        Word: nut   | n - 2 x 1 | u - 3 x 1 | t - 3 x 0 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: tun   | t - 3 x 0 | u - 3 x 1 | n - 2 x 1 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+            Word: nut   | n - 2 x 1 | u - 3 x 1 | t - 3 x 0 | 
+            Word: tun   | t - 3 x 0 | u - 3 x 1 | n - 2 x 1 | 
+    Word: gnu   | g - 1 x 0 | n - 2 x 1 | u - 3 x 1 | 
+        Word: bat   | b - 3 x 0 | a - 2 x 0 | t - 1 x 0 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+            Word: tab   | t - 1 x 0 | a - 2 x 0 | b - 3 x 0 | 
+            Word: bat   | b - 3 x 0 | a - 2 x 0 | t - 1 x 0 | 
+        Word: tab   | t - 1 x 0 | a - 2 x 0 | b - 3 x 0 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: nab   | n - 2 x 1 | a - 2 x 0 | b - 3 x 0 | 
+        Word: gut   | g - 3 x 0 | u - 3 x 1 | t - 2 x 0 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+            Word: tug   | t - 2 x 0 | u - 3 x 1 | g - 3 x 0 | 
+            Word: gut   | g - 3 x 0 | u - 3 x 1 | t - 2 x 0 | 
+        Word: tug   | t - 2 x 0 | u - 3 x 1 | g - 3 x 0 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: ban   | b - 3 x 0 | a - 2 x 0 | n - 2 x 1 | 
+        Word: gut   | g - 3 x 0 | u - 3 x 1 | t - 2 x 0 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+            Word: tug   | t - 2 x 0 | u - 3 x 1 | g - 3 x 0 | 
+            Word: gut   | g - 3 x 0 | u - 3 x 1 | t - 2 x 0 | 
+        Word: tug   | t - 2 x 0 | u - 3 x 1 | g - 3 x 0 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+Word: nag   | n - 2 x 1 | a - 2 x 0 | g - 1 x 0 | 
+    Word: debut     | d - 1 x 1 | e - 2 x 2 | b - 3 x 2 | u - 3 x 1 | t - 2 x 0 | 
+        Word: brain     | b - 3 x 0 | r - 3 x 1 | a - 2 x 2 | i - 3 x 3 | n - 2 x 3 | 
+            Word: mac   | m - 3 x 2 | a - 3 x 3 | c - 2 x 3 | 
+            Word: cam   | c - 2 x 3 | a - 3 x 3 | m - 3 x 2 | 
+    Word: tub   | t - 2 x 0 | u - 3 x 1 | b - 3 x 0 | 
+        Word: dream     | d - 2 x 1 | r - 3 x 1 | e - 2 x 2 | a - 1 x 3 | m - 1 x 2 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: dream     | d - 1 x 1 | r - 2 x 1 | e - 2 x 2 | a - 1 x 3 | m - 1 x 2 | 
+        Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+            Word: but   | b - 3 x 0 | u - 3 x 1 | t - 2 x 0 | 
+            Word: tub   | t - 2 x 0 | u - 3 x 1 | b - 3 x 0 | 
+        Word: but   | b - 3 x 0 | u - 3 x 1 | t - 2 x 0 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: tub   | t - 2 x 0 | u - 3 x 1 | b - 3 x 0 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: but   | b - 3 x 0 | u - 3 x 1 | t - 2 x 0 | 
+        Word: dream     | d - 2 x 1 | r - 3 x 1 | e - 2 x 2 | a - 1 x 3 | m - 1 x 2 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: tubed     | t - 2 x 0 | u - 3 x 1 | b - 3 x 2 | e - 2 x 2 | d - 1 x 1 | 
+        Word: brain     | b - 3 x 0 | r - 3 x 1 | a - 2 x 2 | i - 3 x 3 | n - 2 x 3 | 
+            Word: cam   | c - 2 x 3 | a - 3 x 3 | m - 3 x 2 | 
+            Word: mac   | m - 3 x 2 | a - 3 x 3 | c - 2 x 3 | 
+    Word: cam   | c - 0 x 3 | a - 1 x 3 | m - 1 x 2 | 
+        Word: tubed     | t - 2 x 0 | u - 3 x 1 | b - 3 x 2 | e - 2 x 2 | d - 1 x 1 | 
+            Word: brain     | b - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: debut     | d - 1 x 1 | e - 2 x 2 | b - 3 x 2 | u - 3 x 1 | t - 2 x 0 | 
+            Word: brain     | b - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: mac   | m - 1 x 2 | a - 1 x 3 | c - 0 x 3 | 
+        Word: tubed     | t - 2 x 0 | u - 3 x 1 | b - 3 x 2 | e - 2 x 2 | d - 1 x 1 | 
+            Word: brain     | b - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: debut     | d - 1 x 1 | e - 2 x 2 | b - 3 x 2 | u - 3 x 1 | t - 2 x 0 | 
+            Word: brain     | b - 3 x 0 | r - 3 x 1 | a - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+Word: gar   | g - 1 x 0 | a - 2 x 0 | r - 1 x 1 | 
+    Word: tub   | t - 2 x 0 | u - 3 x 1 | b - 3 x 0 | 
+        Word: amend     | a - 1 x 3 | m - 1 x 2 | e - 2 x 2 | n - 3 x 1 | d - 2 x 1 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: but   | b - 3 x 0 | u - 3 x 1 | t - 2 x 0 | 
+        Word: amend     | a - 1 x 3 | m - 1 x 2 | e - 2 x 2 | n - 3 x 1 | d - 2 x 1 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+    Word: amend     | a - 1 x 3 | m - 1 x 2 | e - 2 x 2 | n - 2 x 1 | d - 1 x 1 | 
+        Word: but   | b - 3 x 0 | u - 3 x 1 | t - 2 x 0 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: tub   | t - 2 x 0 | u - 3 x 1 | b - 3 x 0 | 
+            Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+        Word: cabin     | c - 1 x 3 | a - 2 x 2 | b - 3 x 2 | i - 3 x 3 | n - 2 x 3 | 
+            Word: tub   | t - 2 x 0 | u - 3 x 1 | b - 3 x 0 | 
+            Word: but   | b - 3 x 0 | u - 3 x 1 | t - 2 x 0 | 
+
+real    10m53.063s
+user    10m51.906s
+sys 0m0.360s
+
+
+
+
+
+
+
+
+Penquin - Level 3
+
+time perl -I lib/ script/play.pl \
+    --playfield="n,h,y,n,p,r,m,o,r,o,s,l,u,t,e,e" \
+    --word-to-find=6 \
+    --word-to-find=5 \
+    --word-to-find=5 \
+
+======= Game =======
+ n  h  y  n 
+ p  r  m  o 
+ r  o  s  l 
+ u  t  e  e 
+
+===== Possible Solution =====
+Word: trophy    | t - 3 x 1 | r - 2 x 0 | o - 2 x 1 | p - 1 x 0 | h - 0 x 1 | y - 0 x 2 | 
+    Word: nurse     | n - 2 x 0 | u - 3 x 0 | r - 3 x 1 | s - 2 x 2 | e - 3 x 2 | 
+        Word: lemon     | l - 3 x 3 | e - 3 x 2 | m - 2 x 2 | o - 2 x 3 | n - 1 x 3 | 
+        Word: melon     | m - 3 x 2 | e - 3 x 3 | l - 2 x 3 | o - 1 x 3 | n - 0 x 3 | 
+
+real    1m1.440s
+user    1m1.222s
+sys 0m0.105s
+
+
+
+
+
+
+Penguin - Level 4
+
+time perl -I lib/ script/play.pl \
+    --playfield="f,h,f,s,l,s,i,k,a,r,c,e,g,a,t,n" \
+    --word-to-find=4 \
+    --word-to-find=4 \
+    --word-to-find=8 \
+
+======= Game =======
+ f  h  f  s 
+ l  s  i  k 
+ a  r  c  e 
+ g  a  t  n 
+
+===== Possible Solution =====
+Word: flag  | f - 0 x 0 | l - 1 x 0 | a - 2 x 0 | g - 3 x 0 | 
+    Word: neck  | n - 3 x 3 | e - 2 x 3 | c - 2 x 2 | k - 1 x 3 | 
+        Word: starfish  | s - 3 x 3 | t - 3 x 2 | a - 3 x 1 | r - 2 x 1 | f - 1 x 2 | i - 2 x 2 | s - 1 x 1 | h - 0 x 1 | 
+Word: neck  | n - 3 x 3 | e - 2 x 3 | c - 2 x 2 | k - 1 x 3 | 
+    Word: flag  | f - 0 x 0 | l - 1 x 0 | a - 2 x 0 | g - 3 x 0 | 
+        Word: starfish  | s - 3 x 3 | t - 3 x 2 | a - 3 x 1 | r - 2 x 1 | f - 1 x 2 | i - 2 x 2 | s - 1 x 1 | h - 0 x 1 | 
+    Word: starfish  | s - 3 x 3 | t - 3 x 2 | a - 3 x 1 | r - 2 x 1 | f - 1 x 2 | i - 2 x 2 | s - 1 x 1 | h - 0 x 1 | 
+        Word: flag  | f - 0 x 0 | l - 1 x 0 | a - 2 x 0 | g - 3 x 0 | 
+
+real    11m27.952s
+user    11m26.122s
+sys 0m0.328s
+
+
+
+
+
+
+Penguin - Level 5
+
+time perl -I lib/ script/play.pl \
+    --playfield="w,e,n,f,h,e,a,w,o,g,r,s,r,c,n,i" \
+    --word-to-find=3 \
+    --word-to-find=3 \
+    --word-to-find=4 \
+    --word-to-find=6 \
+
+======= Game =======
+ w  e  n  f 
+ h  e  a  w 
+ o  g  r  s 
+ r  c  n  i 
+
+===== Possible Solution =====
+Word: singer    | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | 
+    Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+        Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+            Word: hew   | h - 3 x 0 | e - 3 x 1 | w - 2 x 0 | 
+        Word: her   | h - 1 x 0 | e - 2 x 1 | r - 3 x 0 | 
+            Word: cow   | c - 3 x 1 | o - 3 x 0 | w - 2 x 0 | 
+        Word: rec   | r - 3 x 0 | e - 2 x 1 | c - 3 x 1 | 
+            Word: who   | w - 1 x 0 | h - 2 x 0 | o - 3 x 0 | 
+        Word: who   | w - 0 x 0 | h - 1 x 0 | o - 2 x 0 | 
+            Word: rec   | r - 3 x 0 | e - 2 x 1 | c - 3 x 1 | 
+    Word: who   | w - 0 x 0 | h - 1 x 0 | o - 2 x 0 | 
+        Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+            Word: rec   | r - 3 x 0 | e - 2 x 1 | c - 3 x 1 | 
+        Word: rec   | r - 3 x 0 | e - 2 x 1 | c - 3 x 1 | 
+            Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+    Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: hew   | h - 3 x 0 | e - 3 x 1 | w - 2 x 0 | 
+            Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+        Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+            Word: hew   | h - 3 x 0 | e - 3 x 1 | w - 2 x 0 | 
+    Word: rec   | r - 3 x 0 | e - 2 x 1 | c - 3 x 1 | 
+        Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+            Word: who   | w - 1 x 0 | h - 2 x 0 | o - 3 x 0 | 
+        Word: who   | w - 1 x 0 | h - 2 x 0 | o - 3 x 0 | 
+            Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+    Word: her   | h - 1 x 0 | e - 2 x 1 | r - 3 x 0 | 
+        Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+            Word: cow   | c - 3 x 1 | o - 3 x 0 | w - 2 x 0 | 
+        Word: cow   | c - 3 x 1 | o - 3 x 0 | w - 2 x 0 | 
+            Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+Word: saw   | s - 2 x 3 | a - 1 x 2 | w - 1 x 3 | 
+    Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: when  | w - 2 x 0 | h - 3 x 0 | e - 2 x 1 | n - 1 x 2 | 
+            Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+        Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | 
+            Word: when  | w - 2 x 0 | h - 3 x 0 | e - 3 x 1 | n - 3 x 2 | 
+        Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+            Word: when  | w - 2 x 0 | h - 3 x 0 | e - 3 x 1 | n - 3 x 2 | 
+    Word: hen   | h - 1 x 0 | e - 0 x 1 | n - 1 x 2 | 
+        Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | 
+            Word: crow  | c - 3 x 1 | r - 3 x 0 | o - 2 x 0 | w - 1 x 0 | 
+        Word: crow  | c - 3 x 1 | r - 3 x 0 | o - 2 x 0 | w - 1 x 0 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 |  ***
+            Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | 
+        Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | 
+            Word: crow  | c - 3 x 1 | r - 3 x 0 | o - 2 x 0 | w - 1 x 0 | 
+    Word: when  | w - 0 x 0 | h - 1 x 0 | e - 0 x 1 | n - 1 x 2 | 
+        Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+            Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+        Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+    Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | 
+        Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+            Word: when  | w - 2 x 0 | h - 3 x 0 | e - 3 x 1 | n - 3 x 2 | 
+        Word: when  | w - 0 x 0 | h - 1 x 0 | e - 2 x 1 | n - 3 x 2 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: hen   | h - 1 x 0 | e - 2 x 1 | n - 3 x 2 | 
+            Word: crow  | c - 3 x 1 | r - 3 x 0 | o - 2 x 0 | w - 1 x 0 | 
+    Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | 
+        Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+            Word: when  | w - 2 x 0 | h - 3 x 0 | e - 3 x 1 | n - 3 x 2 | 
+        Word: hen   | h - 1 x 0 | e - 2 x 1 | n - 3 x 2 | 
+            Word: crow  | c - 3 x 1 | r - 3 x 0 | o - 2 x 0 | w - 1 x 0 | 
+        Word: when  | w - 0 x 0 | h - 1 x 0 | e - 2 x 1 | n - 3 x 2 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+Word: wren  | w - 1 x 3 | r - 2 x 2 | e - 1 x 1 | n - 0 x 2 | 
+    Word: who   | w - 0 x 0 | h - 1 x 0 | o - 2 x 0 | 
+        Word: sac   | s - 2 x 3 | a - 2 x 2 | c - 3 x 1 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+    Word: sac   | s - 2 x 3 | a - 2 x 2 | c - 3 x 1 | 
+        Word: who   | w - 0 x 0 | h - 1 x 0 | o - 2 x 0 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+        Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+            Word: who   | w - 1 x 0 | h - 2 x 0 | o - 3 x 0 | 
+Word: war   | w - 1 x 3 | a - 1 x 2 | r - 2 x 2 | 
+    Word: hens  | h - 1 x 0 | e - 1 x 1 | n - 2 x 2 | s - 2 x 3 | 
+        Word: cow   | c - 3 x 1 | o - 2 x 0 | w - 1 x 0 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+Word: fan   | f - 0 x 3 | a - 1 x 2 | n - 0 x 2 | 
+    Word: rogers    | r - 3 x 0 | o - 2 x 0 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | s - 2 x 3 | 
+        Word: win   | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: chew  | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+        Word: chew  | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+            Word: win   | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+    Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: hewers    | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | e - 1 x 1 | r - 2 x 2 | s - 2 x 3 | 
+            Word: wing  | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | 
+    Word: hers  | h - 1 x 0 | e - 1 x 1 | r - 2 x 2 | s - 2 x 3 | 
+        Word: cow   | c - 3 x 1 | o - 2 x 0 | w - 1 x 0 | 
+            Word: winger    | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+    Word: hewers    | h - 1 x 0 | e - 0 x 1 | w - 0 x 0 | e - 1 x 1 | r - 2 x 2 | s - 2 x 3 | 
+        Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+            Word: wing  | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | 
+        Word: wing  | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+Word: who   | w - 0 x 0 | h - 1 x 0 | o - 2 x 0 | 
+    Word: singer    | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | 
+        Word: rec   | r - 3 x 0 | e - 2 x 1 | c - 3 x 1 | 
+            Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+        Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+            Word: rec   | r - 3 x 0 | e - 2 x 1 | c - 3 x 1 | 
+    Word: wars  | w - 1 x 3 | a - 1 x 2 | r - 2 x 2 | s - 2 x 3 | 
+        Word: enc   | e - 1 x 1 | n - 2 x 2 | c - 3 x 1 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+    Word: craw  | c - 3 x 1 | r - 2 x 2 | a - 1 x 2 | w - 1 x 3 | 
+        Word: ens   | e - 1 x 1 | n - 2 x 2 | s - 2 x 3 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+        Word: greens    | g - 3 x 1 | r - 3 x 0 | e - 2 x 1 | e - 1 x 1 | n - 2 x 2 | s - 2 x 3 | 
+            Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+    Word: swan  | s - 2 x 3 | w - 1 x 3 | a - 1 x 2 | n - 0 x 2 | 
+        Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | 
+            Word: rec   | r - 3 x 0 | e - 2 x 1 | c - 3 x 1 | 
+        Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | 
+            Word: rec   | r - 3 x 0 | e - 2 x 1 | c - 3 x 1 | 
+    Word: fawn  | f - 0 x 3 | a - 1 x 2 | w - 1 x 3 | n - 0 x 2 | 
+        Word: singer    | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | 
+            Word: rec   | r - 3 x 0 | e - 2 x 1 | c - 3 x 1 | 
+    Word: fawner    | f - 0 x 3 | a - 1 x 2 | w - 1 x 3 | n - 0 x 2 | e - 1 x 1 | r - 2 x 2 | 
+        Word: sing  | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | 
+            Word: rec   | r - 3 x 0 | e - 2 x 1 | c - 3 x 1 | 
+    Word: wren  | w - 1 x 3 | r - 2 x 2 | e - 1 x 1 | n - 0 x 2 | 
+        Word: sac   | s - 2 x 3 | a - 2 x 2 | c - 3 x 1 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+    Word: sing  | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | 
+        Word: rec   | r - 3 x 2 | e - 2 x 1 | c - 3 x 1 | 
+            Word: fawner    | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | e - 3 x 1 | r - 3 x 0 | 
+Word: fag   | f - 0 x 3 | a - 1 x 2 | g - 2 x 1 | 
+    Word: corers    | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | e - 2 x 1 | r - 2 x 2 | s - 2 x 3 | 
+        Word: win   | w - 2 x 3 | i - 3 x 3 | n - 2 x 2 | 
+            Word: when  | w - 2 x 0 | h - 3 x 0 | e - 3 x 1 | n - 3 x 2 | 
+        Word: when  | w - 2 x 0 | h - 3 x 0 | e - 3 x 1 | n - 2 x 2 | 
+            Word: win   | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+    Word: hers  | h - 1 x 0 | e - 1 x 1 | r - 2 x 2 | s - 2 x 3 | 
+        Word: cow   | c - 3 x 1 | o - 2 x 0 | w - 1 x 0 | 
+            Word: winner    | w - 2 x 3 | i - 3 x 3 | n - 2 x 2 | n - 3 x 2 | e - 3 x 1 | r - 3 x 0 | 
+        Word: winner    | w - 2 x 3 | i - 3 x 3 | n - 2 x 2 | n - 3 x 2 | e - 2 x 1 | r - 3 x 0 | 
+            Word: cow   | c - 3 x 1 | o - 3 x 0 | w - 2 x 0 | 
+    Word: when  | w - 0 x 0 | h - 1 x 0 | e - 1 x 1 | n - 1 x 2 | 
+        Word: corers    | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | e - 2 x 1 | r - 2 x 2 | s - 2 x 3 | 
+            Word: win   | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+Word: her   | h - 1 x 0 | e - 1 x 1 | r - 2 x 2 | 
+    Word: sing  | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | 
+        Word: cow   | c - 3 x 1 | o - 2 x 0 | w - 1 x 0 | 
+            Word: fawner    | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | e - 3 x 1 | r - 3 x 0 | 
+        Word: fawner    | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | e - 2 x 1 | r - 3 x 0 | 
+            Word: cow   | c - 3 x 1 | o - 3 x 0 | w - 2 x 0 | 
+    Word: swan  | s - 2 x 3 | w - 1 x 3 | a - 2 x 2 | n - 1 x 2 | 
+        Word: cow   | c - 3 x 1 | o - 2 x 0 | w - 1 x 0 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+    Word: cow   | c - 3 x 1 | o - 2 x 0 | w - 1 x 0 | 
+        Word: awns  | a - 2 x 2 | w - 1 x 3 | n - 1 x 2 | s - 2 x 3 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+        Word: singer    | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+            Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+        Word: sing  | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | 
+            Word: fawner    | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | e - 3 x 1 | r - 3 x 0 | 
+        Word: swan  | s - 2 x 3 | w - 1 x 3 | a - 2 x 2 | n - 1 x 2 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+    Word: awns  | a - 2 x 2 | w - 1 x 3 | n - 1 x 2 | s - 2 x 3 | 
+        Word: cow   | c - 3 x 1 | o - 2 x 0 | w - 1 x 0 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+Word: sing  | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | 
+    Word: who   | w - 0 x 0 | h - 1 x 0 | o - 2 x 0 | 
+        Word: rec   | r - 3 x 2 | e - 2 x 1 | c - 3 x 1 | 
+            Word: fawner    | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | e - 3 x 1 | r - 3 x 0 | 
+    Word: her   | h - 1 x 0 | e - 2 x 1 | r - 3 x 2 | 
+        Word: cow   | c - 3 x 1 | o - 2 x 0 | w - 1 x 0 | 
+            Word: fawner    | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | e - 3 x 1 | r - 3 x 0 | 
+        Word: fawner    | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | e - 2 x 1 | r - 3 x 0 | 
+            Word: cow   | c - 3 x 1 | o - 3 x 0 | w - 2 x 0 | 
+    Word: rec   | r - 3 x 2 | e - 2 x 1 | c - 3 x 1 | 
+        Word: fawner    | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | e - 3 x 1 | r - 3 x 0 | 
+            Word: who   | w - 1 x 0 | h - 2 x 0 | o - 3 x 0 | 
+        Word: who   | w - 0 x 0 | h - 1 x 0 | o - 2 x 0 | 
+            Word: fawner    | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | e - 3 x 1 | r - 3 x 0 | 
+Word: wag   | w - 1 x 3 | a - 1 x 2 | g - 2 x 1 | 
+    Word: when  | w - 0 x 0 | h - 1 x 0 | e - 1 x 1 | n - 1 x 2 | 
+        Word: inf   | i - 3 x 3 | n - 2 x 2 | f - 1 x 3 | 
+            Word: corers    | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | e - 2 x 1 | r - 3 x 2 | s - 3 x 3 | 
+        Word: corers    | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | e - 2 x 1 | r - 2 x 2 | s - 2 x 3 | 
+            Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+    Word: corers    | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | e - 2 x 1 | r - 2 x 2 | s - 2 x 3 | 
+        Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 2 x 2 | 
+            Word: when  | w - 2 x 0 | h - 3 x 0 | e - 3 x 1 | n - 3 x 2 | 
+        Word: when  | w - 2 x 0 | h - 3 x 0 | e - 3 x 1 | n - 2 x 2 | 
+            Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+        Word: inf   | i - 3 x 3 | n - 2 x 2 | f - 2 x 3 | 
+            Word: when  | w - 2 x 0 | h - 3 x 0 | e - 3 x 1 | n - 3 x 2 | 
+Word: hewers    | h - 1 x 0 | e - 0 x 1 | w - 0 x 0 | e - 1 x 1 | r - 2 x 2 | s - 2 x 3 | 
+    Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: fan   | f - 1 x 3 | a - 2 x 2 | n - 1 x 2 | 
+            Word: wing  | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | 
+        Word: wing  | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | 
+            Word: fan   | f - 3 x 3 | a - 3 x 2 | n - 2 x 2 | 
+        Word: win   | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: fang  | f - 3 x 3 | a - 3 x 2 | n - 2 x 2 | g - 3 x 1 | 
+        Word: fang  | f - 1 x 3 | a - 2 x 2 | n - 3 x 2 | g - 3 x 1 | 
+            Word: win   | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+        Word: gnaw  | g - 3 x 1 | n - 3 x 2 | a - 2 x 2 | w - 2 x 3 | 
+            Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+    Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+        Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+            Word: org   | o - 2 x 0 | r - 3 x 0 | g - 3 x 1 | 
+        Word: org   | o - 2 x 0 | r - 3 x 0 | g - 3 x 1 | 
+            Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+    Word: win   | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+        Word: fang  | f - 3 x 3 | a - 3 x 2 | n - 2 x 2 | g - 2 x 1 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+            Word: fang  | f - 3 x 3 | a - 3 x 2 | n - 2 x 2 | g - 3 x 1 | 
+    Word: fang  | f - 1 x 3 | a - 2 x 2 | n - 1 x 2 | g - 2 x 1 | 
+        Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+            Word: win   | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+        Word: win   | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+    Word: wing  | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | 
+        Word: fan   | f - 3 x 3 | a - 3 x 2 | n - 2 x 2 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+            Word: fan   | f - 3 x 3 | a - 3 x 2 | n - 2 x 2 | 
+    Word: fawn  | f - 1 x 3 | a - 2 x 2 | w - 2 x 3 | n - 1 x 2 | 
+        Word: org   | o - 2 x 0 | r - 3 x 0 | g - 2 x 1 | 
+            Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+        Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+            Word: org   | o - 2 x 0 | r - 3 x 0 | g - 3 x 1 | 
+    Word: fan   | f - 1 x 3 | a - 2 x 2 | n - 1 x 2 | 
+        Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+            Word: wing  | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | 
+        Word: wing  | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+    Word: org   | o - 2 x 0 | r - 3 x 0 | g - 2 x 1 | 
+        Word: fawn  | f - 1 x 3 | a - 2 x 2 | w - 2 x 3 | n - 1 x 2 | 
+            Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+        Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+            Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+    Word: gnaw  | g - 2 x 1 | n - 1 x 2 | a - 2 x 2 | w - 2 x 3 | 
+        Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+            Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+            Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+        Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+Word: was   | w - 1 x 3 | a - 1 x 2 | s - 2 x 3 | 
+    Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | 
+        Word: when  | w - 0 x 0 | h - 1 x 0 | e - 2 x 1 | n - 3 x 2 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: hen   | h - 1 x 0 | e - 2 x 1 | n - 3 x 2 | 
+            Word: crow  | c - 3 x 1 | r - 3 x 0 | o - 2 x 0 | w - 1 x 0 | 
+        Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+            Word: when  | w - 2 x 0 | h - 3 x 0 | e - 3 x 1 | n - 3 x 2 | 
+    Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+            Word: when  | w - 2 x 0 | h - 3 x 0 | e - 3 x 1 | n - 3 x 2 | 
+        Word: when  | w - 2 x 0 | h - 3 x 0 | e - 2 x 1 | n - 1 x 2 | 
+            Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+        Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | 
+            Word: when  | w - 2 x 0 | h - 3 x 0 | e - 3 x 1 | n - 3 x 2 | 
+    Word: hen   | h - 1 x 0 | e - 0 x 1 | n - 1 x 2 | 
+        Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | 
+            Word: crow  | c - 3 x 1 | r - 3 x 0 | o - 2 x 0 | w - 1 x 0 | 
+        Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | 
+            Word: crow  | c - 3 x 1 | r - 3 x 0 | o - 2 x 0 | w - 1 x 0 | 
+        Word: crow  | c - 3 x 1 | r - 3 x 0 | o - 2 x 0 | w - 1 x 0 | 
+            Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+    Word: when  | w - 0 x 0 | h - 1 x 0 | e - 0 x 1 | n - 1 x 2 | 
+        Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+            Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | 
+        Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+    Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | 
+        Word: hen   | h - 1 x 0 | e - 2 x 1 | n - 3 x 2 | 
+            Word: crow  | c - 3 x 1 | r - 3 x 0 | o - 2 x 0 | w - 1 x 0 | 
+        Word: when  | w - 0 x 0 | h - 1 x 0 | e - 2 x 1 | n - 3 x 2 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+            Word: when  | w - 2 x 0 | h - 3 x 0 | e - 3 x 1 | n - 3 x 2 | 
+Word: grew  | g - 2 x 1 | r - 2 x 2 | e - 1 x 1 | w - 0 x 0 | 
+    Word: ins   | i - 3 x 3 | n - 3 x 2 | s - 2 x 3 | 
+        Word: fawner    | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | e - 2 x 1 | r - 3 x 0 | 
+            Word: och   | o - 3 x 0 | c - 3 x 1 | h - 2 x 0 | 
+    Word: sin   | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+        Word: fawner    | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | e - 2 x 1 | r - 3 x 0 | 
+            Word: och   | o - 3 x 0 | c - 3 x 1 | h - 2 x 0 | 
+Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+    Word: rogers    | r - 3 x 0 | o - 2 x 0 | g - 3 x 1 | e - 2 x 1 | r - 3 x 2 | s - 3 x 3 | 
+        Word: hew   | h - 3 x 0 | e - 3 x 1 | w - 2 x 0 | 
+            Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+        Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+            Word: hew   | h - 3 x 0 | e - 3 x 1 | w - 2 x 0 | 
+    Word: hew   | h - 1 x 0 | e - 1 x 1 | w - 0 x 0 | 
+        Word: rogers    | r - 3 x 0 | o - 2 x 0 | g - 3 x 1 | e - 2 x 1 | r - 3 x 2 | s - 3 x 3 | 
+            Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+        Word: fawn  | f - 1 x 3 | a - 2 x 2 | w - 2 x 3 | n - 1 x 2 | 
+            Word: rogers    | r - 3 x 0 | o - 2 x 0 | g - 3 x 1 | e - 2 x 1 | r - 3 x 2 | s - 3 x 3 | 
+    Word: fawner    | f - 1 x 3 | a - 2 x 2 | w - 2 x 3 | n - 1 x 2 | e - 2 x 1 | r - 3 x 0 | 
+        Word: hers  | h - 2 x 0 | e - 2 x 1 | r - 3 x 2 | s - 3 x 3 | 
+            Word: wog   | w - 2 x 0 | o - 3 x 0 | g - 3 x 1 | 
+    Word: fawn  | f - 1 x 3 | a - 2 x 2 | w - 2 x 3 | n - 1 x 2 | 
+        Word: rogers    | r - 3 x 0 | o - 2 x 0 | g - 3 x 1 | e - 2 x 1 | r - 3 x 2 | s - 3 x 3 | 
+            Word: hew   | h - 3 x 0 | e - 3 x 1 | w - 2 x 0 | 
+        Word: hew   | h - 1 x 0 | e - 1 x 1 | w - 0 x 0 | 
+            Word: rogers    | r - 3 x 0 | o - 2 x 0 | g - 3 x 1 | e - 2 x 1 | r - 3 x 2 | s - 3 x 3 | 
+        Word: org   | o - 2 x 0 | r - 3 x 0 | g - 3 x 1 | 
+            Word: hewers    | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | e - 3 x 1 | r - 3 x 2 | s - 3 x 3 | 
+    Word: hers  | h - 1 x 0 | e - 2 x 1 | r - 3 x 2 | s - 3 x 3 | 
+        Word: wog   | w - 1 x 0 | o - 2 x 0 | g - 3 x 1 | 
+            Word: fawner    | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | e - 3 x 1 | r - 3 x 0 | 
+        Word: fawner    | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | e - 2 x 1 | r - 3 x 0 | 
+            Word: wog   | w - 2 x 0 | o - 3 x 0 | g - 3 x 1 | 
+    Word: org   | o - 2 x 0 | r - 3 x 0 | g - 3 x 1 | 
+        Word: hewers    | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | e - 3 x 1 | r - 3 x 2 | s - 3 x 3 | 
+            Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+        Word: fawn  | f - 1 x 3 | a - 2 x 2 | w - 2 x 3 | n - 1 x 2 | 
+            Word: hewers    | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | e - 3 x 1 | r - 3 x 2 | s - 3 x 3 | 
+Word: fawner    | f - 0 x 3 | a - 1 x 2 | w - 1 x 3 | n - 0 x 2 | e - 1 x 1 | r - 2 x 2 | 
+    Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: sing  | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | 
+            Word: hew   | h - 3 x 0 | e - 3 x 1 | w - 2 x 0 | 
+        Word: hew   | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+            Word: sing  | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | 
+    Word: hew   | h - 1 x 0 | e - 1 x 1 | w - 0 x 0 | 
+        Word: sing  | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+            Word: sing  | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | 
+    Word: sin   | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+        Word: hog   | h - 1 x 0 | o - 2 x 0 | g - 2 x 1 | 
+            Word: crew  | c - 3 x 1 | r - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+        Word: org   | o - 2 x 0 | r - 3 x 0 | g - 2 x 1 | 
+            Word: chew  | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+    Word: sing  | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | 
+        Word: her   | h - 1 x 0 | e - 2 x 1 | r - 3 x 0 | 
+            Word: cow   | c - 3 x 1 | o - 3 x 0 | w - 2 x 0 | 
+        Word: rec   | r - 3 x 0 | e - 2 x 1 | c - 3 x 1 | 
+            Word: who   | w - 1 x 0 | h - 2 x 0 | o - 3 x 0 | 
+        Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+            Word: hew   | h - 3 x 0 | e - 3 x 1 | w - 2 x 0 | 
+        Word: who   | w - 0 x 0 | h - 1 x 0 | o - 2 x 0 | 
+            Word: rec   | r - 3 x 0 | e - 2 x 1 | c - 3 x 1 | 
+    Word: hog   | h - 1 x 0 | o - 2 x 0 | g - 2 x 1 | 
+        Word: crew  | c - 3 x 1 | r - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+            Word: sin   | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: ins   | i - 3 x 3 | n - 3 x 2 | s - 2 x 3 | 
+        Word: sin   | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: crew  | c - 3 x 1 | r - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+        Word: ins   | i - 3 x 3 | n - 3 x 2 | s - 2 x 3 | 
+            Word: crew  | c - 3 x 1 | r - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+    Word: who   | w - 0 x 0 | h - 1 x 0 | o - 2 x 0 | 
+        Word: sing  | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | 
+            Word: rec   | r - 3 x 0 | e - 2 x 1 | c - 3 x 1 | 
+    Word: ins   | i - 3 x 3 | n - 3 x 2 | s - 2 x 3 | 
+        Word: org   | o - 2 x 0 | r - 3 x 0 | g - 2 x 1 | 
+            Word: chew  | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+        Word: hog   | h - 1 x 0 | o - 2 x 0 | g - 2 x 1 | 
+            Word: crew  | c - 3 x 1 | r - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+    Word: org   | o - 2 x 0 | r - 3 x 0 | g - 2 x 1 | 
+        Word: chew  | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+            Word: sin   | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: ins   | i - 3 x 3 | n - 3 x 2 | s - 2 x 3 | 
+        Word: ins   | i - 3 x 3 | n - 3 x 2 | s - 2 x 3 | 
+            Word: chew  | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+        Word: sin   | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: chew  | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+Word: ins   | i - 3 x 3 | n - 3 x 2 | s - 2 x 3 | 
+    Word: hog   | h - 1 x 0 | o - 2 x 0 | g - 2 x 1 | 
+        Word: crew  | c - 3 x 1 | r - 3 x 2 | e - 2 x 1 | w - 2 x 0 | 
+            Word: fawner    | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | e - 3 x 1 | r - 3 x 0 | 
+Word: wan   | w - 1 x 3 | a - 1 x 2 | n - 0 x 2 | 
+    Word: hers  | h - 1 x 0 | e - 1 x 1 | r - 2 x 2 | s - 2 x 3 | 
+        Word: cow   | c - 3 x 1 | o - 2 x 0 | w - 1 x 0 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+    Word: rogers    | r - 3 x 0 | o - 2 x 0 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | s - 2 x 3 | 
+        Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: chew  | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+        Word: chew  | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+            Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+        Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+            Word: chew  | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+Word: cog   | c - 3 x 1 | o - 2 x 0 | g - 2 x 1 | 
+    Word: when  | w - 1 x 0 | h - 2 x 0 | e - 2 x 1 | n - 3 x 2 | 
+        Word: sir   | s - 2 x 3 | i - 3 x 3 | r - 3 x 2 | 
+            Word: fawner    | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | e - 3 x 1 | r - 3 x 0 | 
+    Word: sir   | s - 2 x 3 | i - 3 x 3 | r - 2 x 2 | 
+        Word: when  | w - 1 x 0 | h - 2 x 0 | e - 2 x 1 | n - 1 x 2 | 
+            Word: fawner    | f - 2 x 3 | a - 2 x 2 | w - 3 x 3 | n - 3 x 2 | e - 3 x 1 | r - 3 x 0 | 
+        Word: fawner    | f - 2 x 3 | a - 2 x 2 | w - 3 x 3 | n - 3 x 2 | e - 2 x 1 | r - 3 x 0 | 
+            Word: when  | w - 2 x 0 | h - 3 x 0 | e - 3 x 1 | n - 3 x 2 | 
+Word: fawn  | f - 0 x 3 | a - 1 x 2 | w - 1 x 3 | n - 0 x 2 | 
+    Word: her   | h - 1 x 0 | e - 1 x 1 | r - 2 x 2 | 
+        Word: cow   | c - 3 x 1 | o - 2 x 0 | w - 1 x 0 | 
+            Word: singer    | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+    Word: hew   | h - 1 x 0 | e - 0 x 1 | w - 0 x 0 | 
+        Word: singer    | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+            Word: rogers    | r - 3 x 0 | o - 2 x 0 | g - 3 x 1 | e - 2 x 1 | r - 3 x 2 | s - 3 x 3 | 
+        Word: rogers    | r - 3 x 0 | o - 2 x 0 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | s - 2 x 3 | 
+            Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+        Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+            Word: singer    | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+    Word: org   | o - 2 x 0 | r - 3 x 0 | g - 2 x 1 | 
+        Word: chewer    | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | e - 1 x 1 | r - 2 x 2 | 
+            Word: ins   | i - 3 x 3 | n - 3 x 2 | s - 2 x 3 | 
+            Word: sin   | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+        Word: hewers    | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | e - 1 x 1 | r - 2 x 2 | s - 2 x 3 | 
+            Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+        Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+            Word: hewers    | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | e - 3 x 1 | r - 3 x 2 | s - 3 x 3 | 
+    Word: who   | w - 0 x 0 | h - 1 x 0 | o - 2 x 0 | 
+        Word: singer    | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | 
+            Word: rec   | r - 3 x 0 | e - 2 x 1 | c - 3 x 1 | 
+    Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: singer    | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+            Word: hew   | h - 3 x 0 | e - 3 x 1 | w - 2 x 0 | 
+        Word: hew   | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+            Word: singer    | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+    Word: rogers    | r - 3 x 0 | o - 2 x 0 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | s - 2 x 3 | 
+        Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+            Word: hew   | h - 3 x 0 | e - 3 x 1 | w - 2 x 0 | 
+        Word: hew   | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+            Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+    Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+        Word: org   | o - 2 x 0 | r - 3 x 0 | g - 3 x 1 | 
+            Word: hewers    | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | e - 3 x 1 | r - 3 x 2 | s - 3 x 3 | 
+        Word: hew   | h - 1 x 0 | e - 1 x 1 | w - 0 x 0 | 
+            Word: rogers    | r - 3 x 0 | o - 2 x 0 | g - 3 x 1 | e - 2 x 1 | r - 3 x 2 | s - 3 x 3 | 
+        Word: rogers    | r - 3 x 0 | o - 2 x 0 | g - 3 x 1 | e - 2 x 1 | r - 3 x 2 | s - 3 x 3 | 
+            Word: hew   | h - 3 x 0 | e - 3 x 1 | w - 2 x 0 | 
+    Word: hewers    | h - 1 x 0 | e - 0 x 1 | w - 0 x 0 | e - 1 x 1 | r - 2 x 2 | s - 2 x 3 | 
+        Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+            Word: org   | o - 2 x 0 | r - 3 x 0 | g - 3 x 1 | 
+        Word: org   | o - 2 x 0 | r - 3 x 0 | g - 2 x 1 | 
+            Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+    Word: singer    | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | 
+        Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+            Word: hew   | h - 3 x 0 | e - 3 x 1 | w - 2 x 0 | 
+        Word: her   | h - 1 x 0 | e - 2 x 1 | r - 3 x 0 | 
+            Word: cow   | c - 3 x 1 | o - 3 x 0 | w - 2 x 0 | 
+        Word: rec   | r - 3 x 0 | e - 2 x 1 | c - 3 x 1 | 
+            Word: who   | w - 1 x 0 | h - 2 x 0 | o - 3 x 0 | 
+        Word: who   | w - 0 x 0 | h - 1 x 0 | o - 2 x 0 | 
+            Word: rec   | r - 3 x 0 | e - 2 x 1 | c - 3 x 1 | 
+Word: raw   | r - 2 x 2 | a - 1 x 2 | w - 1 x 3 | 
+    Word: hens  | h - 1 x 0 | e - 1 x 1 | n - 2 x 2 | s - 2 x 3 | 
+        Word: cow   | c - 3 x 1 | o - 2 x 0 | w - 1 x 0 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+Word: wars  | w - 1 x 3 | a - 1 x 2 | r - 2 x 2 | s - 2 x 3 | 
+    Word: who   | w - 0 x 0 | h - 1 x 0 | o - 2 x 0 | 
+        Word: enc   | e - 1 x 1 | n - 2 x 2 | c - 3 x 1 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+    Word: enc   | e - 1 x 1 | n - 2 x 2 | c - 3 x 1 | 
+        Word: who   | w - 0 x 0 | h - 1 x 0 | o - 2 x 0 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+        Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+            Word: who   | w - 1 x 0 | h - 2 x 0 | o - 3 x 0 | 
+    Word: hen   | h - 1 x 0 | e - 1 x 1 | n - 2 x 2 | 
+        Word: cow   | c - 3 x 1 | o - 2 x 0 | w - 1 x 0 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+Word: awn   | a - 1 x 2 | w - 1 x 3 | n - 0 x 2 | 
+    Word: hers  | h - 1 x 0 | e - 1 x 1 | r - 2 x 2 | s - 2 x 3 | 
+        Word: cow   | c - 3 x 1 | o - 2 x 0 | w - 1 x 0 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+    Word: rogers    | r - 3 x 0 | o - 2 x 0 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | s - 2 x 3 | 
+        Word: chew  | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+            Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+        Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: chew  | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+        Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+            Word: chew  | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+Word: wagers    | w - 1 x 3 | a - 1 x 2 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | s - 2 x 3 | 
+    Word: inf   | i - 3 x 3 | n - 2 x 2 | f - 2 x 3 | 
+        Word: hen   | h - 1 x 0 | e - 2 x 1 | n - 3 x 2 | 
+            Word: crow  | c - 3 x 1 | r - 3 x 0 | o - 2 x 0 | w - 1 x 0 | 
+        Word: when  | w - 0 x 0 | h - 1 x 0 | e - 2 x 1 | n - 3 x 2 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+            Word: when  | w - 2 x 0 | h - 3 x 0 | e - 3 x 1 | n - 3 x 2 | 
+    Word: hen   | h - 1 x 0 | e - 2 x 1 | n - 2 x 2 | 
+        Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: crow  | c - 3 x 1 | r - 3 x 0 | o - 2 x 0 | w - 1 x 0 | 
+        Word: crow  | c - 3 x 1 | r - 3 x 0 | o - 2 x 0 | w - 1 x 0 | 
+            Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+        Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+            Word: crow  | c - 3 x 1 | r - 3 x 0 | o - 2 x 0 | w - 1 x 0 | 
+    Word: when  | w - 0 x 0 | h - 1 x 0 | e - 2 x 1 | n - 2 x 2 | 
+        Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+            Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+        Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+    Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: when  | w - 2 x 0 | h - 3 x 0 | e - 3 x 1 | n - 2 x 2 | 
+            Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+        Word: inf   | i - 3 x 3 | n - 2 x 2 | f - 2 x 3 | 
+            Word: when  | w - 2 x 0 | h - 3 x 0 | e - 3 x 1 | n - 3 x 2 | 
+        Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 2 x 2 | 
+            Word: when  | w - 2 x 0 | h - 3 x 0 | e - 3 x 1 | n - 3 x 2 | 
+    Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 2 x 2 | 
+        Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+            Word: when  | w - 2 x 0 | h - 3 x 0 | e - 3 x 1 | n - 3 x 2 | 
+        Word: when  | w - 0 x 0 | h - 1 x 0 | e - 2 x 1 | n - 3 x 2 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: hen   | h - 1 x 0 | e - 2 x 1 | n - 3 x 2 | 
+            Word: crow  | c - 3 x 1 | r - 3 x 0 | o - 2 x 0 | w - 1 x 0 | 
+Word: crew  | c - 3 x 1 | r - 2 x 2 | e - 1 x 1 | w - 0 x 0 | 
+    Word: ins   | i - 3 x 3 | n - 3 x 2 | s - 2 x 3 | 
+        Word: hog   | h - 1 x 0 | o - 2 x 0 | g - 3 x 1 | 
+            Word: fawner    | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | e - 3 x 1 | r - 3 x 0 | 
+        Word: fawner    | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | e - 2 x 1 | r - 3 x 0 | 
+            Word: hog   | h - 2 x 0 | o - 3 x 0 | g - 3 x 1 | 
+    Word: hog   | h - 1 x 0 | o - 2 x 0 | g - 3 x 1 | 
+        Word: ins   | i - 3 x 3 | n - 3 x 2 | s - 2 x 3 | 
+            Word: fawner    | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | e - 3 x 1 | r - 3 x 0 | 
+        Word: sin   | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: fawner    | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | e - 3 x 1 | r - 3 x 0 | 
+    Word: sin   | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+        Word: hog   | h - 1 x 0 | o - 2 x 0 | g - 3 x 1 | 
+            Word: fawner    | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | e - 3 x 1 | r - 3 x 0 | 
+        Word: fawner    | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | e - 2 x 1 | r - 3 x 0 | 
+            Word: hog   | h - 2 x 0 | o - 3 x 0 | g - 3 x 1 | 
+Word: sir   | s - 2 x 3 | i - 3 x 3 | r - 2 x 2 | 
+    Word: cog   | c - 3 x 1 | o - 2 x 0 | g - 2 x 1 | 
+        Word: fawner    | f - 2 x 3 | a - 2 x 2 | w - 3 x 3 | n - 3 x 2 | e - 2 x 1 | r - 3 x 0 | 
+            Word: when  | w - 2 x 0 | h - 3 x 0 | e - 3 x 1 | n - 3 x 2 | 
+        Word: when  | w - 1 x 0 | h - 2 x 0 | e - 2 x 1 | n - 1 x 2 | 
+            Word: fawner    | f - 2 x 3 | a - 2 x 2 | w - 3 x 3 | n - 3 x 2 | e - 3 x 1 | r - 3 x 0 | 
+    Word: when  | w - 0 x 0 | h - 1 x 0 | e - 0 x 1 | n - 1 x 2 | 
+        Word: cog   | c - 3 x 1 | o - 2 x 0 | g - 2 x 1 | 
+            Word: fawner    | f - 2 x 3 | a - 2 x 2 | w - 3 x 3 | n - 3 x 2 | e - 3 x 1 | r - 3 x 0 | 
+Word: hen   | h - 1 x 0 | e - 0 x 1 | n - 0 x 2 | 
+    Word: cow   | c - 3 x 1 | o - 2 x 0 | w - 1 x 0 | 
+        Word: wars  | w - 1 x 3 | a - 1 x 2 | r - 2 x 2 | s - 2 x 3 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+    Word: wars  | w - 1 x 3 | a - 1 x 2 | r - 2 x 2 | s - 2 x 3 | 
+        Word: cow   | c - 3 x 1 | o - 2 x 0 | w - 1 x 0 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+    Word: wagers    | w - 1 x 3 | a - 1 x 2 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | s - 2 x 3 | 
+        Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+            Word: crow  | c - 3 x 1 | r - 3 x 0 | o - 2 x 0 | w - 1 x 0 | 
+        Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: crow  | c - 3 x 1 | r - 3 x 0 | o - 2 x 0 | w - 1 x 0 | 
+        Word: crow  | c - 3 x 1 | r - 3 x 0 | o - 2 x 0 | w - 1 x 0 | 
+            Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+    Word: was   | w - 1 x 3 | a - 1 x 2 | s - 2 x 3 | 
+        Word: crow  | c - 3 x 1 | r - 3 x 0 | o - 2 x 0 | w - 1 x 0 | 
+            Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+        Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | 
+            Word: crow  | c - 3 x 1 | r - 3 x 0 | o - 2 x 0 | w - 1 x 0 | 
+        Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | 
+            Word: crow  | c - 3 x 1 | r - 3 x 0 | o - 2 x 0 | w - 1 x 0 | 
+    Word: saw   | s - 2 x 3 | a - 1 x 2 | w - 1 x 3 | 
+        Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | 
+            Word: crow  | c - 3 x 1 | r - 3 x 0 | o - 2 x 0 | w - 1 x 0 | 
+        Word: crow  | c - 3 x 1 | r - 3 x 0 | o - 2 x 0 | w - 1 x 0 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+            Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | 
+        Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | 
+            Word: crow  | c - 3 x 1 | r - 3 x 0 | o - 2 x 0 | w - 1 x 0 | 
+    Word: grower    | g - 2 x 1 | r - 3 x 0 | o - 2 x 0 | w - 1 x 0 | e - 1 x 1 | r - 2 x 2 | 
+        Word: caws  | c - 3 x 1 | a - 2 x 2 | w - 1 x 3 | s - 2 x 3 | 
+            Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+    Word: crow  | c - 3 x 1 | r - 3 x 0 | o - 2 x 0 | w - 1 x 0 | 
+        Word: was   | w - 1 x 3 | a - 1 x 2 | s - 2 x 3 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+            Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | 
+        Word: saw   | s - 2 x 3 | a - 1 x 2 | w - 1 x 3 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+            Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | 
+    Word: regrow    | r - 2 x 2 | e - 1 x 1 | g - 2 x 1 | r - 3 x 0 | o - 2 x 0 | w - 1 x 0 | 
+        Word: caws  | c - 3 x 1 | a - 2 x 2 | w - 1 x 3 | s - 2 x 3 | 
+            Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+            Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+Word: when  | w - 0 x 0 | h - 1 x 0 | e - 0 x 1 | n - 0 x 2 | 
+    Word: fag   | f - 0 x 3 | a - 1 x 2 | g - 2 x 1 | 
+        Word: corers    | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | e - 2 x 1 | r - 2 x 2 | s - 2 x 3 | 
+            Word: win   | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+    Word: sir   | s - 2 x 3 | i - 3 x 3 | r - 2 x 2 | 
+        Word: cog   | c - 3 x 1 | o - 2 x 0 | g - 2 x 1 | 
+            Word: fawner    | f - 2 x 3 | a - 2 x 2 | w - 3 x 3 | n - 3 x 2 | e - 3 x 1 | r - 3 x 0 | 
+    Word: cog   | c - 3 x 1 | o - 2 x 0 | g - 2 x 1 | 
+        Word: sir   | s - 2 x 3 | i - 3 x 3 | r - 2 x 2 | 
+            Word: fawner    | f - 2 x 3 | a - 2 x 2 | w - 3 x 3 | n - 3 x 2 | e - 3 x 1 | r - 3 x 0 | 
+    Word: rogers    | r - 3 x 0 | o - 2 x 0 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | s - 2 x 3 | 
+        Word: caw   | c - 3 x 1 | a - 2 x 2 | w - 2 x 3 | 
+            Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+    Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: was   | w - 1 x 3 | a - 1 x 2 | s - 2 x 3 | 
+            Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+        Word: saw   | s - 2 x 3 | a - 1 x 2 | w - 1 x 3 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+            Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | 
+    Word: was   | w - 1 x 3 | a - 1 x 2 | s - 2 x 3 | 
+        Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+            Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+        Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+    Word: wagers    | w - 1 x 3 | a - 1 x 2 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | s - 2 x 3 | 
+        Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+            Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+        Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+    Word: saw   | s - 2 x 3 | a - 1 x 2 | w - 1 x 3 | 
+        Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+            Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | 
+        Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+    Word: wag   | w - 1 x 3 | a - 1 x 2 | g - 2 x 1 | 
+        Word: corers    | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | e - 2 x 1 | r - 2 x 2 | s - 2 x 3 | 
+            Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+Word: hog   | h - 1 x 0 | o - 2 x 0 | g - 2 x 1 | 
+    Word: ins   | i - 3 x 3 | n - 3 x 2 | s - 2 x 3 | 
+        Word: crew  | c - 3 x 1 | r - 3 x 2 | e - 2 x 1 | w - 2 x 0 | 
+            Word: fawner    | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | e - 3 x 1 | r - 3 x 0 | 
+    Word: fawner    | f - 0 x 3 | a - 1 x 2 | w - 1 x 3 | n - 0 x 2 | e - 1 x 1 | r - 2 x 2 | 
+        Word: crew  | c - 3 x 1 | r - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+            Word: sin   | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: ins   | i - 3 x 3 | n - 3 x 2 | s - 2 x 3 | 
+        Word: sin   | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: crew  | c - 3 x 1 | r - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+        Word: ins   | i - 3 x 3 | n - 3 x 2 | s - 2 x 3 | 
+            Word: crew  | c - 3 x 1 | r - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+    Word: crew  | c - 3 x 1 | r - 2 x 2 | e - 1 x 1 | w - 2 x 0 | 
+        Word: ins   | i - 3 x 3 | n - 3 x 2 | s - 2 x 3 | 
+            Word: fawner    | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | e - 3 x 1 | r - 3 x 0 | 
+        Word: sin   | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: fawner    | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | e - 3 x 1 | r - 3 x 0 | 
+    Word: sin   | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+        Word: crew  | c - 3 x 1 | r - 3 x 2 | e - 2 x 1 | w - 2 x 0 | 
+            Word: fawner    | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | e - 3 x 1 | r - 3 x 0 | 
+Word: far   | f - 0 x 3 | a - 1 x 2 | r - 2 x 2 | 
+    Word: hens  | h - 1 x 0 | e - 1 x 1 | n - 2 x 2 | s - 2 x 3 | 
+        Word: cow   | c - 3 x 1 | o - 2 x 0 | w - 1 x 0 | 
+            Word: winger    | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+Word: craw  | c - 3 x 1 | r - 2 x 2 | a - 1 x 2 | w - 1 x 3 | 
+    Word: ens   | e - 1 x 1 | n - 2 x 2 | s - 2 x 3 | 
+        Word: who   | w - 0 x 0 | h - 1 x 0 | o - 2 x 0 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+        Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+            Word: who   | w - 1 x 0 | h - 2 x 0 | o - 3 x 0 | 
+    Word: greens    | g - 3 x 1 | r - 3 x 0 | e - 2 x 1 | e - 1 x 1 | n - 2 x 2 | s - 2 x 3 | 
+        Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+            Word: who   | w - 1 x 0 | h - 2 x 0 | o - 3 x 0 | 
+        Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: who   | w - 1 x 0 | h - 2 x 0 | o - 3 x 0 | 
+        Word: who   | w - 1 x 0 | h - 2 x 0 | o - 3 x 0 | 
+            Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+    Word: who   | w - 0 x 0 | h - 1 x 0 | o - 2 x 0 | 
+        Word: greens    | g - 3 x 1 | r - 3 x 0 | e - 2 x 1 | e - 1 x 1 | n - 2 x 2 | s - 2 x 3 | 
+            Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+            Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+        Word: ens   | e - 1 x 1 | n - 2 x 2 | s - 2 x 3 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+    Word: saw   | s - 2 x 3 | a - 1 x 2 | w - 1 x 3 | 
+        Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | 
+            Word: when  | w - 2 x 0 | h - 3 x 0 | e - 3 x 1 | n - 3 x 2 | 
+        Word: when  | w - 2 x 0 | h - 3 x 0 | e - 2 x 1 | n - 1 x 2 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+            Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | 
+        Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+            Word: when  | w - 2 x 0 | h - 3 x 0 | e - 3 x 1 | n - 3 x 2 | 
+    Word: swan  | s - 2 x 3 | w - 1 x 3 | a - 1 x 2 | n - 0 x 2 | 
+        Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | 
+            Word: hew   | h - 3 x 0 | e - 3 x 1 | w - 2 x 0 | 
+        Word: hew   | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+            Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | 
+        Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+            Word: hew   | h - 3 x 0 | e - 3 x 1 | w - 2 x 0 | 
+    Word: was   | w - 1 x 3 | a - 1 x 2 | s - 2 x 3 | 
+        Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+            Word: when  | w - 2 x 0 | h - 3 x 0 | e - 3 x 1 | n - 3 x 2 | 
+        Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | 
+            Word: when  | w - 2 x 0 | h - 3 x 0 | e - 3 x 1 | n - 3 x 2 | 
+        Word: when  | w - 2 x 0 | h - 3 x 0 | e - 2 x 1 | n - 1 x 2 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+            Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | 
+    Word: hewers    | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | e - 1 x 1 | r - 2 x 2 | s - 2 x 3 | 
+        Word: wing  | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | 
+            Word: fan   | f - 3 x 3 | a - 3 x 2 | n - 2 x 2 | 
+        Word: fan   | f - 1 x 3 | a - 2 x 2 | n - 1 x 2 | 
+            Word: wing  | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | 
+        Word: gnaw  | g - 3 x 1 | n - 3 x 2 | a - 2 x 2 | w - 2 x 3 | 
+            Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+        Word: fang  | f - 1 x 3 | a - 2 x 2 | n - 3 x 2 | g - 3 x 1 | 
+            Word: win   | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+        Word: win   | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: fang  | f - 3 x 3 | a - 3 x 2 | n - 2 x 2 | g - 3 x 1 | 
+    Word: singer    | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+        Word: hew   | h - 3 x 0 | e - 3 x 1 | w - 2 x 0 | 
+            Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+        Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+            Word: hew   | h - 3 x 0 | e - 3 x 1 | w - 2 x 0 | 
+    Word: hew   | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+        Word: fawn  | f - 0 x 3 | a - 1 x 2 | w - 1 x 3 | n - 0 x 2 | 
+            Word: singer    | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+        Word: singer    | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+            Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+        Word: swan  | s - 2 x 3 | w - 1 x 3 | a - 1 x 2 | n - 0 x 2 | 
+            Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+    Word: when  | w - 2 x 0 | h - 3 x 0 | e - 2 x 1 | n - 3 x 2 | 
+        Word: saw   | s - 2 x 3 | a - 2 x 2 | w - 1 x 3 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 2 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 2 | 
+            Word: fringe    | f - 2 x 3 | r - 3 x 2 | i - 3 x 3 | n - 2 x 2 | g - 3 x 1 | e - 2 x 1 | 
+        Word: was   | w - 1 x 3 | a - 2 x 2 | s - 2 x 3 | 
+            Word: fringe    | f - 2 x 3 | r - 3 x 2 | i - 3 x 3 | n - 2 x 2 | g - 3 x 1 | e - 2 x 1 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 2 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 2 | 
+        Word: wagers    | w - 1 x 3 | a - 2 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 2 | s - 2 x 3 | 
+            Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+            Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+    Word: fawn  | f - 0 x 3 | a - 1 x 2 | w - 1 x 3 | n - 0 x 2 | 
+        Word: singer    | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+            Word: hew   | h - 3 x 0 | e - 3 x 1 | w - 2 x 0 | 
+        Word: hew   | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+            Word: singer    | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+    Word: fan   | f - 0 x 3 | a - 1 x 2 | n - 0 x 2 | 
+        Word: hewers    | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | e - 1 x 1 | r - 2 x 2 | s - 2 x 3 | 
+            Word: wing  | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | 
+    Word: fawner    | f - 0 x 3 | a - 1 x 2 | w - 1 x 3 | n - 0 x 2 | e - 1 x 1 | r - 2 x 2 | 
+        Word: sing  | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | 
+            Word: hew   | h - 3 x 0 | e - 3 x 1 | w - 2 x 0 | 
+        Word: hew   | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+            Word: sing  | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | 
+Word: rogers    | r - 3 x 0 | o - 2 x 0 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | s - 2 x 3 | 
+    Word: wan   | w - 2 x 3 | a - 2 x 2 | n - 1 x 2 | 
+        Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+            Word: chew  | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+        Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: chew  | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+        Word: chew  | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+            Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+    Word: fawn  | f - 1 x 3 | a - 2 x 2 | w - 2 x 3 | n - 1 x 2 | 
+        Word: hew   | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+            Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+        Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+            Word: hew   | h - 3 x 0 | e - 3 x 1 | w - 2 x 0 | 
+    Word: fan   | f - 1 x 3 | a - 2 x 2 | n - 1 x 2 | 
+        Word: win   | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: chew  | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+        Word: chew  | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+            Word: win   | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+    Word: hew   | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+        Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+            Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+        Word: fawn  | f - 1 x 3 | a - 2 x 2 | w - 2 x 3 | n - 1 x 2 | 
+            Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+    Word: when  | w - 2 x 0 | h - 3 x 0 | e - 2 x 1 | n - 1 x 2 | 
+        Word: caw   | c - 3 x 1 | a - 2 x 2 | w - 2 x 3 | 
+            Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+            Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+        Word: inf   | i - 3 x 3 | n - 2 x 2 | f - 1 x 3 | 
+            Word: caw   | c - 3 x 1 | a - 3 x 2 | w - 3 x 3 | 
+    Word: awn   | a - 2 x 2 | w - 2 x 3 | n - 1 x 2 | 
+        Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+            Word: chew  | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+        Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: chew  | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+        Word: chew  | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+            Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+            Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+    Word: chew  | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+        Word: fan   | f - 1 x 3 | a - 2 x 2 | n - 1 x 2 | 
+            Word: win   | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+        Word: wan   | w - 2 x 3 | a - 2 x 2 | n - 1 x 2 | 
+            Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+        Word: awn   | a - 2 x 2 | w - 2 x 3 | n - 1 x 2 | 
+            Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+            Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+        Word: win   | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: fan   | f - 3 x 3 | a - 3 x 2 | n - 2 x 2 | 
+    Word: win   | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+        Word: fan   | f - 3 x 3 | a - 3 x 2 | n - 2 x 2 | 
+            Word: chew  | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+        Word: chew  | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+            Word: fan   | f - 3 x 3 | a - 3 x 2 | n - 2 x 2 | 
+    Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+        Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+            Word: hew   | h - 3 x 0 | e - 3 x 1 | w - 2 x 0 | 
+        Word: hew   | h - 3 x 0 | e - 3 x 1 | w - 2 x 0 | 
+            Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+    Word: caw   | c - 3 x 1 | a - 2 x 2 | w - 2 x 3 | 
+        Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 2 x 2 | 
+            Word: when  | w - 2 x 0 | h - 3 x 0 | e - 3 x 1 | n - 3 x 2 | 
+        Word: inf   | i - 3 x 3 | n - 2 x 2 | f - 2 x 3 | 
+            Word: when  | w - 2 x 0 | h - 3 x 0 | e - 3 x 1 | n - 3 x 2 | 
+        Word: when  | w - 2 x 0 | h - 3 x 0 | e - 3 x 1 | n - 2 x 2 | 
+            Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+            Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+Word: swan  | s - 2 x 3 | w - 1 x 3 | a - 1 x 2 | n - 0 x 2 | 
+    Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | 
+        Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+            Word: hew   | h - 3 x 0 | e - 3 x 1 | w - 2 x 0 | 
+        Word: rec   | r - 3 x 0 | e - 2 x 1 | c - 3 x 1 | 
+            Word: who   | w - 1 x 0 | h - 2 x 0 | o - 3 x 0 | 
+        Word: her   | h - 1 x 0 | e - 2 x 1 | r - 3 x 0 | 
+            Word: cow   | c - 3 x 1 | o - 3 x 0 | w - 2 x 0 | 
+        Word: who   | w - 0 x 0 | h - 1 x 0 | o - 2 x 0 | 
+            Word: rec   | r - 3 x 0 | e - 2 x 1 | c - 3 x 1 | 
+    Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | 
+        Word: who   | w - 0 x 0 | h - 1 x 0 | o - 2 x 0 | 
+            Word: rec   | r - 3 x 0 | e - 2 x 1 | c - 3 x 1 | 
+        Word: her   | h - 1 x 0 | e - 2 x 1 | r - 3 x 0 | 
+            Word: cow   | c - 3 x 1 | o - 3 x 0 | w - 2 x 0 | 
+        Word: rec   | r - 3 x 0 | e - 2 x 1 | c - 3 x 1 | 
+            Word: who   | w - 1 x 0 | h - 2 x 0 | o - 3 x 0 | 
+        Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+            Word: hew   | h - 3 x 0 | e - 3 x 1 | w - 2 x 0 | 
+    Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+            Word: hew   | h - 3 x 0 | e - 3 x 1 | w - 2 x 0 | 
+        Word: hew   | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+            Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+        Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | 
+            Word: hew   | h - 3 x 0 | e - 3 x 1 | w - 2 x 0 | 
+    Word: org   | o - 2 x 0 | r - 3 x 0 | g - 2 x 1 | 
+        Word: chewer    | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | e - 1 x 1 | r - 2 x 2 | 
+            Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+            Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+    Word: who   | w - 0 x 0 | h - 1 x 0 | o - 2 x 0 | 
+        Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | 
+            Word: rec   | r - 3 x 0 | e - 2 x 1 | c - 3 x 1 | 
+        Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | 
+            Word: rec   | r - 3 x 0 | e - 2 x 1 | c - 3 x 1 | 
+    Word: hew   | h - 1 x 0 | e - 0 x 1 | w - 0 x 0 | 
+        Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+            Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | 
+        Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+    Word: her   | h - 1 x 0 | e - 1 x 1 | r - 2 x 2 | 
+        Word: cow   | c - 3 x 1 | o - 2 x 0 | w - 1 x 0 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+Word: org   | o - 2 x 0 | r - 3 x 0 | g - 2 x 1 | 
+    Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+        Word: hewers    | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | e - 3 x 1 | r - 3 x 2 | s - 3 x 3 | 
+            Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+        Word: fawn  | f - 1 x 3 | a - 2 x 2 | w - 2 x 3 | n - 1 x 2 | 
+            Word: hewers    | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | e - 3 x 1 | r - 3 x 2 | s - 3 x 3 | 
+    Word: swan  | s - 2 x 3 | w - 1 x 3 | a - 1 x 2 | n - 0 x 2 | 
+        Word: chewer    | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | e - 1 x 1 | r - 2 x 2 | 
+            Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+    Word: hewers    | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | e - 1 x 1 | r - 2 x 2 | s - 2 x 3 | 
+        Word: fawn  | f - 1 x 3 | a - 2 x 2 | w - 2 x 3 | n - 1 x 2 | 
+            Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+        Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+            Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+    Word: fawn  | f - 0 x 3 | a - 1 x 2 | w - 1 x 3 | n - 0 x 2 | 
+        Word: chewer    | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | e - 1 x 1 | r - 2 x 2 | 
+            Word: sin   | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: ins   | i - 3 x 3 | n - 3 x 2 | s - 2 x 3 | 
+        Word: hewers    | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | e - 1 x 1 | r - 2 x 2 | s - 2 x 3 | 
+            Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+        Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+            Word: hewers    | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | e - 3 x 1 | r - 3 x 2 | s - 3 x 3 | 
+    Word: chewer    | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | e - 1 x 1 | r - 2 x 2 | 
+        Word: awns  | a - 2 x 2 | w - 1 x 3 | n - 1 x 2 | s - 2 x 3 | 
+            Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+        Word: ins   | i - 3 x 3 | n - 3 x 2 | s - 2 x 3 | 
+            Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+        Word: swan  | s - 2 x 3 | w - 1 x 3 | a - 2 x 2 | n - 1 x 2 | 
+            Word: inf   | i - 3 x 3 | n - 3 x 2 | f - 2 x 3 | 
+            Word: fin   | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+        Word: sin   | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+    Word: fawner    | f - 0 x 3 | a - 1 x 2 | w - 1 x 3 | n - 0 x 2 | e - 1 x 1 | r - 2 x 2 | 
+        Word: ins   | i - 3 x 3 | n - 3 x 2 | s - 2 x 3 | 
+            Word: chew  | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+        Word: chew  | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+            Word: sin   | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: ins   | i - 3 x 3 | n - 3 x 2 | s - 2 x 3 | 
+        Word: sin   | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+            Word: chew  | c - 3 x 1 | h - 3 x 0 | e - 2 x 1 | w - 2 x 0 | 
+Word: hers  | h - 1 x 0 | e - 1 x 1 | r - 2 x 2 | s - 2 x 3 | 
+    Word: wan   | w - 2 x 3 | a - 2 x 2 | n - 1 x 2 | 
+        Word: cow   | c - 3 x 1 | o - 2 x 0 | w - 1 x 0 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+    Word: wog   | w - 1 x 0 | o - 2 x 0 | g - 2 x 1 | 
+        Word: fawner    | f - 1 x 3 | a - 2 x 2 | w - 2 x 3 | n - 1 x 2 | e - 2 x 1 | r - 3 x 0 | 
+            Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+        Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+            Word: fawner    | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | e - 3 x 1 | r - 3 x 0 | 
+    Word: fan   | f - 1 x 3 | a - 2 x 2 | n - 1 x 2 | 
+        Word: cow   | c - 3 x 1 | o - 2 x 0 | w - 1 x 0 | 
+            Word: winger    | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+    Word: fag   | f - 1 x 3 | a - 2 x 2 | g - 2 x 1 | 
+        Word: cow   | c - 3 x 1 | o - 2 x 0 | w - 1 x 0 | 
+            Word: winner    | w - 2 x 3 | i - 3 x 3 | n - 2 x 2 | n - 3 x 2 | e - 3 x 1 | r - 3 x 0 | 
+        Word: winner    | w - 2 x 3 | i - 3 x 3 | n - 2 x 2 | n - 3 x 2 | e - 2 x 1 | r - 3 x 0 | 
+            Word: cow   | c - 3 x 1 | o - 3 x 0 | w - 2 x 0 | 
+    Word: awn   | a - 2 x 2 | w - 2 x 3 | n - 1 x 2 | 
+        Word: cow   | c - 3 x 1 | o - 2 x 0 | w - 1 x 0 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+    Word: cow   | c - 3 x 1 | o - 2 x 0 | w - 1 x 0 | 
+        Word: winger    | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+            Word: fan   | f - 3 x 3 | a - 3 x 2 | n - 2 x 2 | 
+        Word: wan   | w - 2 x 3 | a - 2 x 2 | n - 1 x 2 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+        Word: awn   | a - 2 x 2 | w - 2 x 3 | n - 1 x 2 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+        Word: fan   | f - 1 x 3 | a - 2 x 2 | n - 1 x 2 | 
+            Word: winger    | w - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 3 x 0 | 
+        Word: fag   | f - 1 x 3 | a - 2 x 2 | g - 3 x 1 | 
+            Word: winner    | w - 2 x 3 | i - 3 x 3 | n - 2 x 2 | n - 3 x 2 | e - 3 x 1 | r - 3 x 0 | 
+    Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+        Word: wog   | w - 1 x 0 | o - 2 x 0 | g - 3 x 1 | 
+            Word: fawner    | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | e - 3 x 1 | r - 3 x 0 | 
+        Word: fawner    | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | e - 2 x 1 | r - 3 x 0 | 
+            Word: wog   | w - 2 x 0 | o - 3 x 0 | g - 3 x 1 | 
+Word: sin   | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | 
+    Word: hog   | h - 1 x 0 | o - 2 x 0 | g - 2 x 1 | 
+        Word: crew  | c - 3 x 1 | r - 3 x 2 | e - 2 x 1 | w - 2 x 0 | 
+            Word: fawner    | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | e - 3 x 1 | r - 3 x 0 | 
+Word: hew   | h - 1 x 0 | e - 0 x 1 | w - 0 x 0 | 
+    Word: fawner    | f - 0 x 3 | a - 1 x 2 | w - 1 x 3 | n - 0 x 2 | e - 1 x 1 | r - 2 x 2 | 
+        Word: sing  | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+            Word: sing  | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | 
+    Word: fawn  | f - 0 x 3 | a - 1 x 2 | w - 1 x 3 | n - 0 x 2 | 
+        Word: singer    | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: rogers    | r - 3 x 0 | o - 2 x 0 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | s - 2 x 3 | 
+            Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+        Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+            Word: singer    | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+        Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+            Word: rogers    | r - 3 x 0 | o - 2 x 0 | g - 3 x 1 | e - 2 x 1 | r - 3 x 2 | s - 3 x 3 | 
+    Word: rogers    | r - 3 x 0 | o - 2 x 0 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | s - 2 x 3 | 
+        Word: fawn  | f - 1 x 3 | a - 2 x 2 | w - 2 x 3 | n - 1 x 2 | 
+            Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+        Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+            Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+    Word: swan  | s - 2 x 3 | w - 1 x 3 | a - 1 x 2 | n - 0 x 2 | 
+        Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+            Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | 
+        Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+    Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: fawn  | f - 0 x 3 | a - 1 x 2 | w - 1 x 3 | n - 0 x 2 | 
+            Word: singer    | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+        Word: singer    | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+            Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+        Word: swan  | s - 2 x 3 | w - 1 x 3 | a - 1 x 2 | n - 0 x 2 | 
+            Word: fringe    | f - 2 x 3 | r - 2 x 2 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | 
+            Word: finger    | f - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 3 x 1 | e - 2 x 1 | r - 2 x 2 | 
+    Word: inc   | i - 3 x 3 | n - 3 x 2 | c - 3 x 1 | 
+        Word: fawn  | f - 1 x 3 | a - 2 x 2 | w - 2 x 3 | n - 1 x 2 | 
+            Word: rogers    | r - 3 x 0 | o - 2 x 0 | g - 3 x 1 | e - 2 x 1 | r - 3 x 2 | s - 3 x 3 | 
+        Word: rogers    | r - 3 x 0 | o - 2 x 0 | g - 3 x 1 | e - 2 x 1 | r - 3 x 2 | s - 3 x 3 | 
+            Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+    Word: singer    | s - 2 x 3 | i - 3 x 3 | n - 3 x 2 | g - 2 x 1 | e - 1 x 1 | r - 2 x 2 | 
+        Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+            Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+        Word: cor   | c - 3 x 1 | o - 2 x 0 | r - 3 x 0 | 
+            Word: fawn  | f - 2 x 3 | a - 3 x 2 | w - 3 x 3 | n - 2 x 2 | 
+
+real    27m14.806s
+user    27m14.506s
+sys 0m0.294s
+

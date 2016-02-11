@@ -21,7 +21,8 @@ Readonly my $GAME => WordBrain::Game->new(
         { letter => 'g', row => 2, col => 0 },
         { letter => 'h', row => 2, col => 1 },
         { letter => 'i', row => 2, col => 2 },
-    ]
+    ],
+    words_to_find => [ ],
 );
 
 subtest 'Get Letter At Position That Has No Letter' => sub {

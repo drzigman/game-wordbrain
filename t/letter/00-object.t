@@ -21,4 +21,9 @@ subtest "$CLASS has the correct attributes" => sub {
     has_attribute_ok( $CLASS, 'col' );
 };
 
+subtest "$CLASS has the correct methods" => sub {
+    has_method_ok( $CLASS, '_operator_equality' );
+    has_method_ok( $CLASS, '_operator_stringify' );
+};
+
 done_testing;
