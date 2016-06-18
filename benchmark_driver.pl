@@ -3,7 +3,7 @@
 use strict;
 no warnings;
 
-my @LIBRARIES = ( 'moose/lib', 'perl_oop/lib' );
+my @LIBRARIES = ( 'moose/lib', 'perl_oop/lib', 'check_prefix/lib' );
 my @LEVELS    = (
     { name => 'Ant 1',  playfield => 'takl', length_of_words_to_find => [ 4 ] },
     { name => 'Ant 2',  playfield => 'meaz', length_of_words_to_find => [ 4 ] },
