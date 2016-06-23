@@ -86,9 +86,9 @@ Game::WordBrain is a solver created to generation potential solutions for L<http
 
 =over 4
 
-=item L<https://itunes.apple.com/us/app/wordbrain/id708600202?mt=8|iOS>
+=item L<iOS|https://itunes.apple.com/us/app/wordbrain/id708600202?mt=8>
 
-=item L<https://play.google.com/store/apps/details?id=se.maginteractive.wordbrain&hl=en|Android>
+=item L<Android|https://play.google.com/store/apps/details?id=se.maginteractive.wordbrain&hl=en>
 
 =back
 
@@ -98,9 +98,9 @@ If you are new to WordBrain or simply want a jumpstart on how this module works 
 
 =over 4
 
-=item L<https://www.youtube.com/watch?v=_1fnTyJg7uA|YAPC::2016 Presentation on YouTube - "Solving WordBrain - A Depth First Search of a Problem Of Great Breadth">
+=item L<YAPC::2016 Presentation on YouTube - "Solving WordBrain - A Depth First Search of a Problem Of Great Breadth"|https://www.youtube.com/watch?v=_1fnTyJg7uA>
 
-=item L<https://drive.google.com/file/d/0B7wWgMKY-dDxb1RwMWxRZ3lEWFE/view|Presentation Slides>
+=item L<Presentation Slides|https://drive.google.com/file/d/0B7wWgMKY-dDxb1RwMWxRZ3lEWFE/view>
 
 =back
 
