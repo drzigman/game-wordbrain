@@ -112,7 +112,7 @@ ArrayRef of L<Game::WordBrain::Letter>s that comprise the game field
 
 =head2 B<words_to_find>
 
-ArrayRef of L<Game::WordBrain::WordtoFind>s that indicate the number of words to find as well as the length of each word.
+ArrayRef of L<Game::WordBrain::WordToFind>s that indicate the number of words to find as well as the length of each word.
 
 =head2 speller
 
@@ -384,7 +384,7 @@ sub find_near_letters {
         max_word_length => 5,     # Optional
     });
 
-Similiar to find_near_letters, but returns an ArrayRef of L<Game::WordBrain::Word>s that can be constructed from the given L<Game::WordBrain::Letter>, ArrayRef of used L<Game::WordBrain::Letters>s and the max_word_length that should be searched for ( this should be the max L<Game::WordBrain::WordtoFind>->{num_letters} ).
+Similiar to find_near_letters, but returns an ArrayRef of L<Game::WordBrain::Word>s that can be constructed from the given L<Game::WordBrain::Letter>, ArrayRef of used L<Game::WordBrain::Letter>s and the max_word_length that should be searched for ( this should be the max L<Game::WordBrain::WordToFind>->{num_letters} ).
 
 =cut
 
@@ -489,31 +489,3 @@ See http://dev.perl.org/licenses/ for more information.
 =cut
 
 1;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

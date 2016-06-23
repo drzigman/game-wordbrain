@@ -3,6 +3,7 @@ package Game::WordBrain::Prefix;
 use strict;
 use warnings;
 
+use Game::WordBrain::Prefix::WordList;
 use Cwd qw( abs_path );
 
 # VERSION
@@ -79,32 +80,53 @@ sub new {
     }
 
     if( !exists $args->{word_list} ) {
-        my $my_abs_path    = abs_path( __FILE__ );
-        $args->{word_list} = substr( $my_abs_path, 0, length( $my_abs_path ) - length( '/lib/Game/WordBrain/Prefix.pm') ) . '/words.txt';
+        $args->{word_list} = 'Game::WordBrain::Prefix::WordList';
+
     }
 
-    $args->{_prefix_cache} = $class->_load_words({
-        max_prefix_length => $args->{max_prefix_length},
-        word_list         => $args->{word_list},
-    });
+    $args->{_prefix_cache} = _load_words( $args );
 
     return bless $args, $class;
 }
 
 sub _load_words {
-    my $class = shift;
     my $args  = shift;
 
+    print "Loading Words\n";
     my $prefix_cache = { };
 
-    open( my $words_fh, "<", $args->{word_list} ) or die "Unable to open words file";
-    while( my $word = <$words_fh> ) {
-        for( my $length = 1; $length <= $args->{max_prefix_length}; $length++ ) {
-            if( length( $word ) >= $length ) {
-                $prefix_cache->{ substr( $word, 0, $length ) } = 1;
+    # Cheaper to just copy the code for the load then create a _load_word.
+    # Saves us the stackin'
+    if( $args->{word_list} eq 'Game::WordBrain::Prefix::WordList' ) {
+        my $data_start = tell Game::WordBrain::Prefix::WordList::DATA;
+
+        while( my $word = <Game::WordBrain::Prefix::WordList::DATA> ) {
+            chomp $word;
+
+            for( my $length = 1; $length <= $args->{max_prefix_length}; $length++ ) {
+                if( length( $word ) >= $length ) {
+                    $prefix_cache->{ substr( $word, 0, $length ) } = 1;
+                }
+                else {
+                    last;
+                }
             }
-            else {
-                last;
+        }
+
+        seek Game::WordBrain::Prefix::WordList::DATA, $data_start, 0;
+    }
+    else {
+        open( my $words_fh, "<", $args->{word_list} ) or die "Unable to open words file";
+        while( my $word = <$words_fh> ) {
+            chomp $word;
+
+            for( my $length = 1; $length <= $args->{max_prefix_length}; $length++ ) {
+                if( length( $word ) >= $length ) {
+                    $prefix_cache->{ substr( $word, 0, $length ) } = 1;
+                }
+                else {
+                    last;
+                }
             }
         }
     }

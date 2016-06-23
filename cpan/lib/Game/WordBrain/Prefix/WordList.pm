@@ -1,3 +1,23 @@
+package Game::WordBrain::Prefix::WordList;
+
+use strict;
+use warnings;
+
+# VERSION
+# ABSTRACT: Default WordList for Prefix
+
+=head1 NAME
+
+Game::WordBrain::Prefix::WordList - Default WordList for Prefix
+
+=head1 DESCRIPTION
+
+If no other wordlist is provided to L<Game::WordBrain::Prefix::WordList> this one will be used
+
+=cut
+
+1;
+__DATA__
 &c
 'd
 'em
