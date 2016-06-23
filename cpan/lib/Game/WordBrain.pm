@@ -82,7 +82,7 @@ Game::WordBrain - Solver for the Mobile App "WordBrain"
 
 =head1 DESCRIPTION
 
-Game::WordBrain is a solver created to generation potential solutions for L<http://maginteractive.com/|Mag Interactive>'s WordBrain.  WordBrain is available for:
+Game::WordBrain is a solver created to generation potential solutions for L<Mag Interactive|http://maginteractive.com>'s WordBrain.  WordBrain is available for:
 
 =over 4
 
@@ -92,7 +92,7 @@ Game::WordBrain is a solver created to generation potential solutions for L<http
 
 =back
 
-This module is currently functional for I<simple> games ( 4x4 and less ) but it requires B<SIGNIFICANT> time to process larger ones.  Feel free to propose improvements at the L<https://github.com/drzigman/game-wordbrain|GitHub> for this repo!
+This module is currently functional for I<simple> games ( 4x4 and less ) but it requires B<SIGNIFICANT> time to process larger ones.  Feel free to propose improvements at the L<GitHub|https://github.com/drzigman/game-wordbrain> for this repo!
 
 If you are new to WordBrain or simply want a jumpstart on how this module works and it's limitations (and evolution) please see:
 
