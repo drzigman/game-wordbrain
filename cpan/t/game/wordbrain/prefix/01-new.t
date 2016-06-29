@@ -21,7 +21,7 @@ subtest "Construct Prefix With No Args" => sub {
 
     isa_ok( $prefix, 'Game::WordBrain::Prefix' );
     cmp_ok( $prefix->{max_prefix_length},  '==', 8, 'Correct default max_prefix_length' );
-    cmp_ok( $prefix->{word_list},          'eq', 'Game::WordBrain::Prefix::WordList', 'Correct word_list' );
+    cmp_ok( $prefix->{word_list},          'eq', 'Game::WordBrain::WordList', 'Correct word_list' );
     cmp_ok( $prefix->{_prefix_cache}{fro}, '==', 1, 'Something populated the _prefix_cache' );
 };
 

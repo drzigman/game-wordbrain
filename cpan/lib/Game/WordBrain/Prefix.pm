@@ -3,15 +3,14 @@ package Game::WordBrain::Prefix;
 use strict;
 use warnings;
 
-use Game::WordBrain::Prefix::WordList;
-use Cwd qw( abs_path );
+use Game::WordBrain::WordList;
 
 # VERSION
 # ABSTRACT: Creates a Cache of Valid Word Prefixes
 
 =head1 NAME
 
-WordBrain::Prefix - Creates a Cache of Valid Word Prefixes
+Game::WordBrain::Prefix - Creates a Cache of Valid Word Prefixes
 
 =head1 SYNOPSIS
 
@@ -80,7 +79,7 @@ sub new {
     }
 
     if( !exists $args->{word_list} ) {
-        $args->{word_list} = 'Game::WordBrain::Prefix::WordList';
+        $args->{word_list} = 'Game::WordBrain::WordList';
 
     }
 
@@ -92,15 +91,14 @@ sub new {
 sub _load_words {
     my $args  = shift;
 
-    print "Loading Words\n";
     my $prefix_cache = { };
 
     # Cheaper to just copy the code for the load then create a _load_word.
     # Saves us the stackin'
-    if( $args->{word_list} eq 'Game::WordBrain::Prefix::WordList' ) {
-        my $data_start = tell Game::WordBrain::Prefix::WordList::DATA;
+    if( $args->{word_list} eq 'Game::WordBrain::WordList' ) {
+        my $data_start = tell Game::WordBrain::WordList::DATA;
 
-        while( my $word = <Game::WordBrain::Prefix::WordList::DATA> ) {
+        while( my $word = <Game::WordBrain::WordList::DATA> ) {
             chomp $word;
 
             for( my $length = 1; $length <= $args->{max_prefix_length}; $length++ ) {
@@ -113,7 +111,7 @@ sub _load_words {
             }
         }
 
-        seek Game::WordBrain::Prefix::WordList::DATA, $data_start, 0;
+        seek Game::WordBrain::WordList::DATA, $data_start, 0;
     }
     else {
         open( my $words_fh, "<", $args->{word_list} ) or die "Unable to open words file";

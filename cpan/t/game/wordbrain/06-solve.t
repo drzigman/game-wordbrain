@@ -87,7 +87,7 @@ subtest '3x3 - 2 Words' => sub {
     subtest 'Check Solutions' => sub {
         my $expected_solution = [qw( slide doll )];
 
-        if( cmp_ok( scalar @{ $game->{solutions} }, '==', 43, 'Correct number of solutions' ) ) {
+        if( cmp_ok( scalar @{ $game->{solutions} }, '==', 73, 'Correct number of solutions' ) ) {
             my $found_solution = 0;
             for my $solution (@{ $game->{solutions} }) {
                 if( $solution->{words}->[0]->word eq $expected_solution->[0]
