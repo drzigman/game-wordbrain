@@ -38,7 +38,7 @@ subtest 'Construct Game' => sub {
     is_deeply( $game->{letters}, \@letters, 'Correct letters' );
     is_deeply( $game->{words_to_find}, [ $word_to_find1, $word_to_find2 ], 'Correct words_to_find' );
     ok( exists $game->{solutions}, 'solutions exists' );
-    isa_ok( $game->{speller}, 'Text::Aspell' );
+    isa_ok( $game->{speller}, 'Game::WordBrain::Speller' );
     isa_ok( $game->{prefix}, 'Game::WordBrain::Prefix' );
 };
 
