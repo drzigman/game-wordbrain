@@ -440,9 +440,23 @@ sub _find_near_words {
 
 Robert Stone, C<< <drzigman AT cpan DOT org > >>
 
+=head1 CONTRIBUTORS
+
+Special thanks to the following individuals who submitted bug reports, performance ideas, and/or pull requests.
+
+=over 4
+
+=item Todd Rinaldo
+
+=item Mohammad S Anwar C< mohammad.anwar@yahoo.com >
+
+=back
+
 =head1 ACKNOWLEDGMENTS
 
 Special thanks to L<BrainStorm Incubator|http://brainstormincubator.com> for funding the development of this module and providing test resources.
+
+Further thanks to L<Houston Perl Mongers|http://houston.pm.org> for providing input and ideas for improvement.
 
 =head1 COPYRIGHT & LICENSE
 
