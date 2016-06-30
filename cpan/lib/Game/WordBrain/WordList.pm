@@ -1,18 +1,18 @@
-package Game::WordBrain::Prefix::WordList;
+package Game::WordBrain::WordList;
 
 use strict;
 use warnings;
 
 # VERSION
-# ABSTRACT: Default WordList for Prefix
+# ABSTRACT: Default WordList for WordBrain Solver
 
 =head1 NAME
 
-Game::WordBrain::Prefix::WordList - Default WordList for Prefix
+Game::WordBrain::WordList - Default WordList for WordBrain Solver
 
 =head1 DESCRIPTION
 
-If no other wordlist is provided to L<Game::WordBrain::Prefix::WordList> this one will be used
+If no other wordlist is provided this one will be used automagically
 
 =cut
 

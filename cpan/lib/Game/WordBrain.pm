@@ -8,12 +8,11 @@ use Game::WordBrain::Word;
 use Game::WordBrain::Solution;
 use Game::WordBrain::WordToFind;
 use Game::WordBrain::Prefix;
+use Game::WordBrain::Speller;
 
 use Storable qw( dclone );
 use List::Util qw( reduce first );
 use List::MoreUtils qw( first_index );
-
-use Text::Aspell;
 
 # VERSION
 # ABSTRACT: Solver for Mag Interactive's WordBrain Mobile Game
@@ -32,7 +31,7 @@ Game::WordBrain - Solver for the Mobile App "WordBrain"
     push @letters, Game::WordBrain::Letter->new({ letter => 'k', row => 1, col => 1 });
 
     my $words_to_find = [ Game::WordBrain::WordToFind->... ];
-    my $speller       = Text::Aspell->new;
+    my $speller       = Game::WordBrain::Speller->...;
     my $prefix        = Game::WordBrain::Prefix->...;
 
     my $game = Game::WordBrain->new({
@@ -72,17 +71,9 @@ Game::WordBrain - Solver for the Mobile App "WordBrain"
         max_word_length => 5,     # Optional
     });
 
-    # Spellcheck a Word
-    if( $game->spellcheck_word( $word ) ) {
-        print "Valid Word!";
-    }
-    else {
-        print "Not a valid word";
-    }
-
 =head1 DESCRIPTION
 
-Game::WordBrain is a solver created to generation potential solutions for L<http://maginteractive.com/|Mag Interactive>'s WordBrain.  WordBrain is available for:
+Game::WordBrain is a solver created to generation potential solutions for L<Mag Interactive|http://maginteractive.com>'s WordBrain.  WordBrain is available for:
 
 =over 4
 
@@ -92,7 +83,7 @@ Game::WordBrain is a solver created to generation potential solutions for L<http
 
 =back
 
-This module is currently functional for I<simple> games ( 4x4 and less ) but it requires B<SIGNIFICANT> time to process larger ones.  Feel free to propose improvements at the L<https://github.com/drzigman/game-wordbrain|GitHub> for this repo!
+This module is currently functional for I<simple> games ( 4x4 and less ) but it requires B<SIGNIFICANT> time to process larger ones.  Feel free to propose improvements at the L<GitHub|https://github.com/drzigman/game-wordbrain> for this repo!
 
 If you are new to WordBrain or simply want a jumpstart on how this module works and it's limitations (and evolution) please see:
 
@@ -116,9 +107,9 @@ ArrayRef of L<Game::WordBrain::WordToFind>s that indicate the number of words to
 
 =head2 speller
 
-An instance of L<Text::Aspell> that is used to spell check potential words.
+An instance of L<Game::WordBrain::Speller> that is used to spell check potential words.
 
-If this is not provided it will be automagically built.
+If this is not provided it will be automagically built.  You generally do not need to provide this but if you wish to use something other than the provided wordlist creating your own L<Game::WordBrain::Speller> and providing it in the call to new would be how to accomplish that.
 
 =head2 prefix
 
@@ -136,7 +127,7 @@ Generated after a call to ->solve has been made.  This is an ArrayRef of L<Game:
 
     my $letters       = [ Game::WordBrain::Letter->... ];
     my $words_to_find = [ Game::WordBrain::WordToFind->... ];
-    my $speller       = Text::Aspell->new;
+    my $speller       = Game::WordBrain::Speller->...;
     my $prefix        = Game::WordBrain::Prefix->...;
 
     my $game = Game::WordBrain->new({
@@ -146,7 +137,7 @@ Generated after a call to ->solve has been made.  This is an ArrayRef of L<Game:
         prefix        => $prefix,        # optional
     });
 
-Given an ArrayRef of L<Game::WordBrain::Letter>s, an ArrayRef of L<Game::WordBrain::WordToFind>, and optionally an instance of L<Text::Aspell> and L<Game::WordBrain::Prefix> constructs and returns a new WordBrain game.
+Given an ArrayRef of L<Game::WordBrain::Letter>s, an ArrayRef of L<Game::WordBrain::WordToFind>, and optionally an instance of L<Game::WordBrain::Speller> and L<Game::WordBrain::Prefix> constructs and returns a new WordBrain game.
 
 B<NOTE> While it is also possible to pass solutions => [ Game::WordBrain::Solution->...], there is really no reason for a consumer to do so.
 
@@ -161,9 +152,7 @@ sub new {
     }
 
     if( !exists $args->{speller} ) {
-        $args->{speller} = Text::Aspell->new;
-        $args->{speller}->set_option( 'lang', 'en_US' );
-        $args->{speller}->set_option( 'sug-mode', 'fast' );
+        $args->{speller} = Game::WordBrain::Speller->new();
     }
 
     if( !exists $args->{prefix} ) {
@@ -218,14 +207,14 @@ sub solve {
     my @solutions;
     for my $letter (@{ $self->{letters} }) {
         my $possible_words = $self->find_near_words({
-            letter => $letter,
+            letter          => $letter,
             max_word_length => $max_word_length,
         });
 
         my @actual_words;
         for my $possible_word (@{ $possible_words }) {
             if( grep { $_->{num_letters} == length ( $possible_word->word ) } @{ $self->{words_to_find} } ) {
-                if( $self->spellcheck_word( $possible_word ) ) {
+                if( $self->{speller}->is_valid_word( $possible_word ) ) {
                     push @actual_words, $possible_word;
                 }
             }
@@ -447,36 +436,27 @@ sub _find_near_words {
     return \@words;
 }
 
-=head2 spellcheck_word
-
-    my $game = Game::WordBrain->...;
-    my $word = Game::WordBrain::Word->...;
-
-    if( $game->spellcheck_word( $word ) ) {
-        print "Valid Word!";
-    }
-    else {
-        print "Not a valid word";
-    }
-
-Uses L<Text::Aspell> to spell check a potential L<Game::WordBrain::Word> for a solution.  Returns a truthy value if the word is a valid english word and a falsey value otherwise.
-
-=cut
-
-sub spellcheck_word {
-    my $self = shift;
-    my $word = shift;
-
-    return $self->{speller}->check( $word->word );
-}
-
 =head1 AUTHORS
 
 Robert Stone, C<< <drzigman AT cpan DOT org > >>
 
+=head1 CONTRIBUTORS
+
+Special thanks to the following individuals who submitted bug reports, performance ideas, and/or pull requests.
+
+=over 4
+
+=item Todd Rinaldo
+
+=item Mohammad S Anwar C< mohammad.anwar@yahoo.com >
+
+=back
+
 =head1 ACKNOWLEDGMENTS
 
 Special thanks to L<BrainStorm Incubator|http://brainstormincubator.com> for funding the development of this module and providing test resources.
+
+Further thanks to L<Houston Perl Mongers|http://houston.pm.org> for providing input and ideas for improvement.
 
 =head1 COPYRIGHT & LICENSE
 
