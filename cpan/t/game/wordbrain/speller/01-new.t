@@ -15,7 +15,7 @@ Readonly my $PATH_TO_WORDLIST => substr( $MY_ABS_PATH, 0, length( $MY_ABS_PATH )
 
 
 subtest 'Construct Speller With No Args' => sub {
-	my $speller;
+    my $speller;
     lives_ok {
         $speller = Game::WordBrain::Speller->new();
     } 'Lives through creation of speller';
@@ -26,7 +26,7 @@ subtest 'Construct Speller With No Args' => sub {
 };
 
 subtest 'Construct Speller with word_list specified' => sub {
-	my $speller;
+    my $speller;
     lives_ok {
         $speller = Game::WordBrain::Speller->new({
             word_list => $PATH_TO_WORDLIST,
