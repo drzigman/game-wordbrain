@@ -1,3 +1,6 @@
+v0.2.1 2016-07-01
+  - Added missing Test::Exception testing dep to dist.ini
+
 v0.2.0 2016-06-30
   - Additional POD Error Fixed (Contribution by Mohammad S Anwar)
   - Refactored to remove dependency on Text::Aspell
